@@ -20,18 +20,6 @@ export default function Navbar() {
     >
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <a href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-          {/* Geometric M Mark — Polaris-inspired */}
-          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="36" height="36" rx="4" fill="var(--text)"/>
-            <path
-              d="M7 27V9L13.5 20L18 12L22.5 20L29 9V27"
-              stroke="var(--bg)"
-              strokeWidth="2.5"
-              strokeLinecap="square"
-              strokeLinejoin="miter"
-              fill="none"
-            />
-          </svg>
           <span style={{ 
             fontFamily: 'var(--font-display)', 
             fontWeight: 700, 
