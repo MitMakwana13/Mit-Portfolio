@@ -1,34 +1,50 @@
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 export default function Cursor() {
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
-    const handleMove = (e: MouseEvent) => {
-      setMousePos({ x: e.clientX, y: e.clientY });
+    const onMouseMove = (e: MouseEvent) => {
+      setPosition({ x: e.clientX, y: e.clientY });
     };
-    window.addEventListener('mousemove', handleMove);
-    return () => window.removeEventListener('mousemove', handleMove);
+
+    const onMouseOver = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (
+        target.tagName === 'A' || 
+        target.tagName === 'BUTTON' || 
+        target.closest('a') || 
+        target.closest('button') ||
+        target.classList.contains('interactive')
+      ) {
+        setIsHovering(true);
+      } else {
+        setIsHovering(false);
+      }
+    };
+
+    window.addEventListener('mousemove', onMouseMove);
+    window.addEventListener('mouseover', onMouseOver);
+
+    return () => {
+      window.removeEventListener('mousemove', onMouseMove);
+      window.removeEventListener('mouseover', onMouseOver);
+    };
   }, []);
 
   return (
-    <motion.div
-      animate={{ 
-        x: mousePos.x - 150, 
-        y: mousePos.y - 150 
-      }}
-      transition={{ type: 'spring', damping: 30, stiffness: 200, mass: 0.5 }}
+    <div
+      className="fixed top-0 left-0 pointer-events-none z-[9999] hidden md:block transition-transform duration-200 ease-out"
       style={{
-        position: 'fixed',
-        width: '300px',
-        height: '300px',
-        borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(94, 17, 255, 0.08) 0%, transparent 70%)',
-        pointerEvents: 'none',
-        zIndex: 9999,
-        mixBlendMode: 'multiply'
+        transform: `translate3d(${position.x}px, ${position.y}px, 0) translate(-50%, -50%)`,
       }}
-    />
+    >
+      <div 
+        className={`bg-white rounded-full transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          isHovering ? 'w-10 h-10 opacity-30 shadow-lg' : 'w-2 h-2 opacity-100'
+        }`}
+      ></div>
+    </div>
   );
 }

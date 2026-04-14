@@ -1,112 +1,62 @@
-import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import useTypewriter from '../hooks/useTypewriter';
 
 export default function Hero() {
-  const containerVars = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.5,
-      },
-    },
-  };
+  const words = ["Python", "NLP", "GANs", "LLMs", "Deep Learning", "Generative AI"];
+  const currentWord = useTypewriter(words);
+  const [isMounted, setIsMounted] = useState(false);
 
-  const itemVars = {
-    hidden: { y: 100, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        ease: [0.22, 1, 0.36, 1] as const,
-      },
-    },
-  };
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   return (
-    <section className="section-padding" style={{ minHeight: '80vh', display: 'flex', alignItems: 'center' }}>
-      <div className="container">
-        <motion.div
-          variants={containerVars}
-          initial="hidden"
-          animate="visible"
-        >
-          <div style={{ overflow: 'hidden' }}>
-            <motion.p 
-              variants={itemVars}
-              style={{ 
-                fontFamily: 'var(--font-heading)', 
-                textTransform: 'uppercase', 
-                letterSpacing: '0.2em',
-                fontSize: '0.875rem',
-                color: 'var(--text-muted)',
-                marginBottom: '1rem'
-              }}
-            >
-              Creative Developer & AI Architect
-            </motion.p>
-          </div>
-          
-          <div style={{ overflow: 'hidden' }}>
-            <motion.h1 
-              variants={itemVars}
-              className="massive-text"
-              style={{ marginBottom: '2rem' }}
-            >
-              Mit <br /> Makwana
-            </motion.h1>
-          </div>
+    <section className="relative min-h-[90vh] flex flex-col justify-center px-6 md:px-12 lg:px-24 pt-32 overflow-hidden bg-background">
+      <div className={`max-w-7xl mx-auto w-full transition-opacity duration-1000 ${isMounted ? 'opacity-100' : 'opacity-0'}`}>
+        <div className={isMounted ? 'animate-fade-up' : 'reveal-hidden'}>
+          <h1 className="text-6xl md:text-8xl font-sans font-black text-foreground tracking-tighter leading-[0.9] mb-8">
+            I build things <br /> 
+            <span className="text-accent underline decoration-accent/30 underline-offset-8">
+              that learn.
+            </span>
+          </h1>
+        </div>
 
-          <div style={{ overflow: 'hidden' }}>
-            <motion.p 
-              variants={itemVars}
-              style={{ 
-                fontSize: 'clamp(1.25rem, 3vw, 2.5rem)',
-                maxWidth: '800px',
-                fontFamily: 'var(--font-heading)',
-                fontWeight: 500,
-                lineHeight: 1.2
-              }}
-            >
-              Specializing in <span style={{ color: 'var(--accent)' }}>AI Integration</span>, Automations, and high-end software experiences.
-            </motion.p>
-          </div>
+        <div className={isMounted ? 'animate-fade-up delay-200' : 'reveal-hidden'}>
+          <p className="text-lg md:text-2xl text-muted font-medium mb-12 flex flex-wrap items-center gap-x-3 gap-y-2">
+            <span>Python &amp; ML Expert</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-accent/50 hidden md:block"></span>
+            <span>{currentWord}<span className="animate-pulse">|</span></span>
+            <span className="w-1.5 h-1.5 rounded-full bg-accent/50 hidden md:block"></span>
+            <span>Surat, Gujarat 🇮🇳</span>
+          </p>
+        </div>
 
-          <motion.div 
-            variants={itemVars}
-            style={{ marginTop: '4rem' }}
+        <div className={`flex flex-wrap gap-6 ${isMounted ? 'animate-fade-up delay-300' : 'reveal-hidden'}`}>
+          <a 
+            href="#work" 
+            className="px-8 py-4 border-2 border-foreground text-foreground font-bold uppercase tracking-widest hover:bg-foreground hover:text-background transition-all duration-300 text-sm"
           >
-            <div style={{ 
-              display: 'flex', 
-              alignItems: 'center', 
-              gap: '1rem',
-              fontFamily: 'var(--font-mono)',
-              fontSize: '0.75rem',
-              textTransform: 'uppercase',
-              color: 'var(--text-muted)'
-            }}>
-              <span style={{ 
-                width: '12px', 
-                height: '12px', 
-                borderRadius: '50%', 
-                background: 'var(--accent)',
-                display: 'inline-block',
-                animation: 'pulse 2s infinite'
-              }}></span>
-              Available for high-impact projects
-            </div>
-          </motion.div>
-        </motion.div>
+            View Work
+          </a>
+          <a 
+            href="#contact" 
+            className="px-8 py-4 bg-foreground text-background font-bold uppercase tracking-widest hover:bg-transparent hover:text-foreground border-2 border-foreground transition-all duration-300 text-sm"
+          >
+            Get in Touch
+          </a>
+          <a 
+            href="https://github.com/MitMakwana13" 
+            target="_blank" rel="noopener noreferrer"
+            className="px-8 py-4 border-2 border-accent text-accent font-bold uppercase tracking-widest hover:bg-accent hover:text-background transition-all duration-300 text-sm"
+          >
+            GitHub ↗
+          </a>
+        </div>
       </div>
 
-      <style>{`
-        @keyframes pulse {
-          0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(94, 17, 255, 0.7); }
-          70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(94, 17, 255, 0); }
-          100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(94, 17, 255, 0); }
-        }
-      `}</style>
+      {/* Background ambient effect - CSS only */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-accent/5 rounded-full blur-[120px] -z-10 animate-fade-in delay-500"></div>
     </section>
   );
 }

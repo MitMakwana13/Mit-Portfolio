@@ -1,4 +1,3 @@
-<!-- Intentionally blank/transparent favicon to avoid showing the old "M" mark. -->
 <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-  <rect width="32" height="32" fill="transparent" />
+  <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="sans-serif" font-weight="900" font-size="10" letter-spacing="-0.5" fill="#000000">MIT.M</text>
 </svg>

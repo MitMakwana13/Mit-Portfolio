@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion';
-
 export default function Marquee() {
   const items = [
     'AI INTEGRATION', 
@@ -10,39 +8,32 @@ export default function Marquee() {
   ];
 
   return (
-    <section style={{ 
-      backgroundColor: 'var(--text)', 
-      color: 'var(--bg)', 
-      padding: '2rem 0',
-      overflow: 'hidden',
-      whiteSpace: 'nowrap',
-      width: '100vw',
-      marginLeft: 'calc(-50vw + 50%)'
-    }}>
-      <motion.div
-        animate={{ x: [0, -1000] }}
-        transition={{
-          repeat: Infinity,
-          duration: 20,
-          ease: "linear"
-        }}
-        style={{ display: 'inline-block' }}
-      >
-        {[...items, ...items, ...items].map((item, idx) => (
-          <span 
-            key={idx} 
-            style={{ 
-              fontFamily: 'var(--font-display)', 
-              fontSize: '2rem', 
-              fontWeight: 700,
-              padding: '0 4rem',
-              letterSpacing: '0.05em'
-            }}
-          >
-            {item} <span style={{ color: 'var(--accent)', margin: '0 2rem' }}>·</span>
-          </span>
-        ))}
-      </motion.div>
+    <section className="bg-foreground py-10 overflow-hidden border-y border-white/5 relative">
+      <div className="flex whitespace-nowrap animate-marquee">
+        <div className="flex gap-16 px-8 items-center">
+          {[...items, ...items, ...items, ...items].map((item, idx) => (
+            <span 
+              key={idx} 
+              className="font-sans font-black text-3xl md:text-5xl text-background tracking-tighter flex items-center gap-12"
+            >
+              {item} 
+              <span className="text-accent">·</span>
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <style>{`
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+          display: flex;
+          width: fit-content;
+          animation: marquee 30s linear infinite;
+        }
+      `}</style>
     </section>
   );
 }
