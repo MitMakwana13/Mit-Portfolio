@@ -14,7 +14,7 @@ const certificates: Certificate[] = [
     issuer: "IBM (Credly)",
     date: "Issued Jun 2025",
     color: "#006699",
-    link: "https://www.credly.com/users/mitmakwana"
+    link: "https://www.credly.com/badges/523e947b-2379-4071-bb31-f8c5b036f8b5/linked_in?t=t7291g"
   },
   {
     title: "Generative AI Mastery & Internship",
