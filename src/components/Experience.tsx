@@ -41,6 +41,16 @@ const experiences: ExperienceItem[] = [
     location: 'Remote',
     description: 'Designed and trained GANs and LLM-based pipelines. Built RAG systems using LangChain and Hugging Face. Developed chatbot solutions using transformer models for real-world deployment.',
     skills: ['GANs', 'LLMs', 'LangChain', 'RAG', 'Hugging Face', 'Prompt Engineering']
+  },
+  {
+    type: 'education',
+    role: 'BSc Information Technology',
+    org: 'AURO University',
+    period: '2022 – 2025',
+    duration: '3 years',
+    location: 'Surat, Gujarat',
+    description: 'Bachelor\'s degree in Information Technology with a focus on software development, data structures, algorithms, and foundational computer science. Built the technical base that led to specialising in AI & ML.',
+    skills: ['Programming', 'Data Structures', 'Algorithms', 'Web Development', 'Databases']
   }
 ];
 
