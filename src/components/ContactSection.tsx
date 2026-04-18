@@ -2,6 +2,7 @@ import { useInView } from 'react-intersection-observer';
 
 export default function ContactSection() {
   const contactLinks = [
+    { name: "Email", value: "meetmakwana2004@gmail.com", url: "mailto:meetmakwana2004@gmail.com" },
     { name: "LinkedIn", value: "linkedin.com/in/mitmakwana", url: "https://linkedin.com/in/mitmakwana" },
     { name: "GitHub", value: "github.com/MitMakwana13", url: "https://github.com/MitMakwana13" },
     { name: "Location", value: "Surat, Gujarat, India", url: "https://maps.google.com/?q=Surat,Gujarat,India" }
