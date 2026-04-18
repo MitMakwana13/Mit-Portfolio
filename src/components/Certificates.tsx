@@ -60,10 +60,13 @@ function CertificateCard({ cert, index }: { cert: Certificate; index: number }) 
   });
 
   return (
-    <div
+    <a
+      href={cert.link}
+      target="_blank"
+      rel="noopener noreferrer"
       ref={ref}
       style={{ animationDelay: `${index * 100}ms` }}
-      className={`group bg-card p-8 rounded-[12px] border border-foreground/5 hover:border-accent transition-all duration-300 flex items-center gap-6 ${
+      className={`block group bg-card p-8 rounded-[12px] border border-foreground/5 hover:border-accent transition-all duration-300 cursor-pointer flex items-center gap-6 ${
         inView ? 'animate-fade-up' : 'reveal-hidden'
       }`}
     >
@@ -85,15 +88,12 @@ function CertificateCard({ cert, index }: { cert: Certificate; index: number }) 
           {cert.date}
         </span>
         
-        <a 
-          href={cert.link} 
-          target="_blank" 
-          rel="noopener noreferrer"
+        <span 
           className="text-foreground text-[10px] uppercase font-bold tracking-widest flex items-center gap-2 group-hover:text-accent transition-colors duration-300"
         >
           Verify <span>→</span>
-        </a>
+        </span>
       </div>
-    </div>
+    </a>
   );
 }
