@@ -1,10 +1,13 @@
 export default function Marquee() {
   const items = [
-    'AI INTEGRATION', 
-    'AUTOMATION', 
-    'HIGH-END WEBSITES', 
-    'SOFTWARE DEVELOPMENT', 
-    'UX ARCHITECTURE'
+    'NLP', 
+    'GENERATIVE AI',
+    'LLMs',
+    'GANS',
+    'RAG PIPELINES',
+    'TRANSFORMERS',
+    'LANGCHAIN',
+    'PYTHON'
   ];
 
   return (

@@ -6,6 +6,7 @@ import Services from './components/Services';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Certificates from './components/Certificates';
+import Experience from './components/Experience';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import Cursor from './components/Cursor';
@@ -22,6 +23,7 @@ function App() {
           <Marquee />
           <Services />
           <Projects />
+          <Experience />
           <Skills />
           <Certificates />
           <ContactSection />
