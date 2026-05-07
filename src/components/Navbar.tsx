@@ -50,7 +50,6 @@ export default function Navbar() {
               </a>
             ))}
             
-            {/* Resume Button Temporarily Hidden
             <a 
               href="/Mit_Makwana_Resume.pdf" 
               target="_blank" 
@@ -59,7 +58,6 @@ export default function Navbar() {
             >
               Resume
             </a>
-            */}
             
             {/* Theme Toggle */}
             <button
@@ -113,7 +111,6 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
-          {/* Resume Button Temporarily Hidden
           <a
             href="/Mit_Makwana_Resume.pdf"
             target="_blank"
@@ -123,7 +120,6 @@ export default function Navbar() {
           >
             RESUME ↗
           </a>
-          */}
         </div>
       </div>
     </>
