@@ -60,7 +60,7 @@ export default function Experience() {
       <div className="max-w-7xl mx-auto">
         <header className="mb-20">
           <h2 className="text-foreground/30 uppercase tracking-[0.2em] text-sm font-bold mb-4">Experience</h2>
-          <p className="text-4xl md:text-5xl font-display font-bold text-foreground max-w-2xl leading-tight">
+          <p className="text-3xl md:text-4xl font-semibold text-foreground max-w-2xl leading-tight tracking-tight">
             Built in the real <br />world. From day one.
           </p>
         </header>
@@ -108,7 +108,7 @@ function ExperienceCard({ exp, index }: { exp: ExperienceItem; index: number }) 
       {/* Right: Content */}
       <div className="flex-1 pb-8 md:pb-0 border-b border-foreground/5 md:border-0 group-hover:border-accent/20 transition-colors duration-300">
         <div className="flex flex-wrap items-start gap-3 mb-3">
-          <h3 className="text-xl md:text-2xl font-display font-bold text-foreground tracking-tight group-hover:text-accent transition-colors duration-300">
+          <h3 className="text-xl md:text-2xl font-bold text-foreground tracking-tight group-hover:text-accent transition-colors duration-300">
             {exp.role}
           </h3>
         </div>

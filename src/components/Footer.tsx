@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto">
         {/* CTA Block */}
         <div className="mb-16 pb-16 border-b border-foreground/5">
-          <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground tracking-tight lg:tracking-tighter mb-6 max-w-2xl leading-[1.05]">
+          <h2 className="text-3xl md:text-4xl font-semibold text-foreground tracking-tight mb-6 max-w-2xl leading-[1.15]">
             Have a workflow that shouldn't be manual?
           </h2>
           <p className="text-muted text-base md:text-lg mb-8 max-w-xl">
@@ -32,7 +32,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
           {/* Brand */}
           <div>
-            <p className="text-foreground font-display font-bold text-xl mb-3">Mit Makwana</p>
+            <p className="text-foreground font-bold text-xl mb-3">Mit Makwana</p>
             <p className="text-muted text-sm leading-relaxed mb-1">AI agents & automation systems</p>
             <p className="text-foreground/30 text-xs font-mono">Surat, India · Available globally</p>
           </div>

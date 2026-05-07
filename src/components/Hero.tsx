@@ -15,17 +15,23 @@ export default function Hero() {
           {/* Left Column — Copy */}
           <div className="lg:w-[55%]">
             <div className={isMounted ? 'animate-fade-up' : 'reveal-hidden'}>
-              <p className="text-foreground/30 uppercase tracking-[0.2em] text-sm font-display font-bold mb-6">
+              <p className="text-muted uppercase tracking-[0.2em] text-xs font-mono mb-6">
                 AI/ML Engineer & Full-Stack Builder
               </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground tracking-tight lg:tracking-tighter leading-[1.1] mb-8 max-w-2xl">
-                Hi, I'm Mit. I build AI agents, automation systems, RAG apps, and niche websites.
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground tracking-tight leading-[1.15] mb-8 max-w-2xl">
+                Hi, I'm Mit.
+                <br />
+                I build AI agents,
+                <br className="hidden sm:block" />
+                {" "}automation systems,
+                <br className="hidden sm:block" />
+                {" "}RAG apps, and niche websites.
               </h1>
             </div>
 
             <div className={isMounted ? 'animate-fade-up delay-200' : 'reveal-hidden'}>
-              <p className="text-lg md:text-xl text-muted font-medium mb-10 max-w-xl leading-relaxed">
-                I'm an AI/ML engineer focused on practical systems that reduce repetitive work, improve workflows, and turn ideas into deployed products.
+              <p className="text-lg md:text-xl text-muted mb-10 max-w-xl leading-relaxed">
+                Practical systems that reduce repetitive work, improve workflows, and turn ideas into deployed products.
               </p>
             </div>
 

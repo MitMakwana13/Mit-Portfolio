@@ -55,8 +55,8 @@ export default function Offers() {
     <section id="work" className="py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-background border-t border-foreground/5">
       <div className="max-w-7xl mx-auto">
         <header className="mb-20">
-          <h2 className="text-foreground/30 uppercase tracking-[0.2em] text-sm font-display font-bold mb-4">What I build</h2>
-          <p className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground tracking-tight lg:tracking-tighter leading-[1.1] max-w-3xl">
+          <h2 className="text-muted uppercase tracking-[0.2em] text-xs font-mono mb-4">What I build</h2>
+          <p className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground tracking-tight leading-[1.15] max-w-3xl">
             Three core systems. Plus anything custom you need.
           </p>
         </header>
@@ -77,7 +77,7 @@ export default function Offers() {
                 {offer.icon}
               </div>
 
-              <h3 className="text-2xl font-display font-bold text-foreground mb-3 tracking-tight group-hover:text-accent transition-colors duration-300">
+              <h3 className="text-xl font-bold text-foreground mb-3 tracking-tight group-hover:text-accent transition-colors duration-300">
                 {offer.title}
               </h3>
 

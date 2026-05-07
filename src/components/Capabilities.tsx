@@ -53,8 +53,8 @@ export default function Capabilities() {
     <section className="py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-background border-t border-foreground/5">
       <div className="max-w-7xl mx-auto">
         <header className="mb-20">
-          <h2 className="text-foreground/30 uppercase tracking-[0.2em] text-sm font-display font-bold mb-4">Core stack & capabilities</h2>
-          <p className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground tracking-tight lg:tracking-tighter leading-[1.1] max-w-3xl">
+          <h2 className="text-muted uppercase tracking-[0.2em] text-xs font-mono mb-4">Core stack & capabilities</h2>
+          <p className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground tracking-tight leading-[1.15] max-w-3xl">
             What I can build with.
           </p>
         </header>
@@ -75,7 +75,7 @@ export default function Capabilities() {
                 {cap.icon}
               </div>
 
-              <h3 className="text-lg font-display font-bold text-foreground mb-2 tracking-tight group-hover:text-accent transition-colors duration-300">
+              <h3 className="text-lg font-bold text-foreground mb-2 tracking-tight group-hover:text-accent transition-colors duration-300">
                 {cap.title}
               </h3>
 

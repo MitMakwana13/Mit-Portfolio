@@ -46,8 +46,8 @@ export default function FAQ() {
     <section id="faq" className="py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-background border-t border-foreground/5">
       <div className="max-w-7xl mx-auto">
         <header className="mb-20">
-          <h2 className="text-foreground/30 uppercase tracking-[0.2em] text-sm font-display font-bold mb-4">Buyer FAQ</h2>
-          <p className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground tracking-tight lg:tracking-tighter leading-[1.1] max-w-3xl">
+          <h2 className="text-muted uppercase tracking-[0.2em] text-xs font-mono mb-4">Buyer FAQ</h2>
+          <p className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground tracking-tight leading-[1.15] max-w-3xl">
             The questions every smart buyer asks.
           </p>
         </header>
@@ -61,7 +61,7 @@ export default function FAQ() {
               key={idx} 
               className="group"
             >
-              <summary className="flex items-center justify-between cursor-pointer py-6 text-foreground font-display font-bold text-lg md:text-xl tracking-tight hover:text-accent transition-colors duration-300 list-none [&::-webkit-details-marker]:hidden focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:outline-none">
+              <summary className="flex items-center justify-between cursor-pointer py-6 text-foreground font-bold text-base md:text-lg tracking-tight hover:text-accent transition-colors duration-300 list-none [&::-webkit-details-marker]:hidden focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:outline-none">
                 {faq.q}
                 <span className="text-foreground/30 group-open:rotate-45 transition-transform duration-300 text-2xl ml-4 flex-shrink-0">
                   +

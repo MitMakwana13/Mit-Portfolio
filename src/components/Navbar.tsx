@@ -96,7 +96,7 @@ export default function Navbar() {
             key={link.name}
             href={link.href}
             onClick={() => setIsMobileMenuOpen(false)}
-            className="text-4xl font-display font-black uppercase tracking-tighter text-foreground hover:text-accent transition-colors"
+            className="text-3xl font-bold uppercase tracking-tight text-foreground hover:text-accent transition-colors"
           >
             {link.name}
           </a>
@@ -106,7 +106,7 @@ export default function Navbar() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => setIsMobileMenuOpen(false)}
-          className="text-4xl font-display font-black uppercase tracking-tighter text-accent hover:text-foreground transition-colors mt-4"
+          className="text-3xl font-bold uppercase tracking-tight text-accent hover:text-foreground transition-colors mt-4"
         >
           RESUME ↗
         </a>
