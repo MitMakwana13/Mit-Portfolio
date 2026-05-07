@@ -42,23 +42,18 @@ const caseStudies: CaseStudy[] = [
     },
   },
   {
-    title: "AI Lead Qualification Agent",
-    industry: "Real Estate · Brokerage",
-    outcome: "Qualifies inbound leads in 3–5 messages and books site visits automatically.",
-    problem: "A real estate broker was manually screening 40+ WhatsApp inquiries per day. Most were unqualified. Qualified leads were lost to slow response times.",
-    solution: "Built a conversational agent that qualifies leads by asking about budget, location preference, and timeline. Books site visits into the broker's calendar and sends a brief before each meeting.",
-    technicalDecision: "Used a structured extraction prompt to reliably pull budget ranges and location preferences from casual conversation, even when buyers are vague.",
-    impact: "Enabled faster lead response and reduced unqualified site visits.",
-    stack: "Next.js · FastAPI · Supabase · Claude API",
+    title: "Niche Community Platform",
+    industry: "Social · Gujarati Diaspora",
+    outcome: "A full-stack community platform connecting Gujarati professionals globally.",
+    problem: "Gujarati professionals worldwide had no dedicated platform to network, share opportunities, and collaborate. Generic social networks diluted community identity.",
+    solution: "Built a complete web application with user profiles, posts, event listings, and community features. Mobile-first design with modern UI and real-time content.",
+    technicalDecision: "Used Next.js for SSR/SEO, Supabase for auth and real-time data, and Tailwind CSS for rapid UI iteration. Implemented role-based access for community moderation.",
+    impact: "Launched to initial beta users with functional profiles, feeds, and community engagement features.",
+    stack: "Next.js · TypeScript · Supabase · Tailwind CSS · Vercel",
     image: "",
-    gradient: "from-emerald-900/80 to-black",
-    link: "mailto:meetmakwana2004@gmail.com",
-    tag: "Representative",
-    video: {
-      preview: "/videos/lead-agent-preview.mp4",
-      full: "/videos/lead-agent-full.mp4",
-      poster: "/videos/lead-agent-poster.jpg",
-    },
+    gradient: "from-amber-900/80 to-black",
+    link: "https://github.com/MitMakwana13",
+    tag: "Shipped",
   },
   {
     title: "Internal Knowledge Agent",
@@ -80,20 +75,6 @@ const caseStudies: CaseStudy[] = [
     },
   },
   {
-    title: "Niche Community Platform",
-    industry: "Social · Gujarati Diaspora",
-    outcome: "A full-stack community platform connecting Gujarati professionals globally.",
-    problem: "Gujarati professionals worldwide had no dedicated platform to network, share opportunities, and collaborate. Generic social networks diluted community identity.",
-    solution: "Built a complete web application with user profiles, posts, event listings, and community features. Mobile-first design with modern UI and real-time content.",
-    technicalDecision: "Used Next.js for SSR/SEO, Supabase for auth and real-time data, and Tailwind CSS for rapid UI iteration. Implemented role-based access for community moderation.",
-    impact: "Launched to initial beta users with functional profiles, feeds, and community engagement features.",
-    stack: "Next.js · TypeScript · Supabase · Tailwind CSS · Vercel",
-    image: "",
-    gradient: "from-amber-900/80 to-black",
-    link: "https://github.com/MitMakwana13",
-    tag: "Shipped",
-  },
-  {
     title: "AI-Powered Stock Forecasting",
     industry: "Finance · ML Prototype",
     outcome: "Time-series forecasting dashboard with LSTM and Transformer model experimentation.",
@@ -106,6 +87,25 @@ const caseStudies: CaseStudy[] = [
     gradient: "from-rose-900/80 to-black",
     link: "https://github.com/MitMakwana13",
     tag: "ML Prototype",
+  },
+  {
+    title: "AI Lead Qualification Agent",
+    industry: "Real Estate · Brokerage",
+    outcome: "Qualifies inbound leads in 3–5 messages and books site visits automatically.",
+    problem: "A real estate broker was manually screening 40+ WhatsApp inquiries per day. Most were unqualified. Qualified leads were lost to slow response times.",
+    solution: "Built a conversational agent that qualifies leads by asking about budget, location preference, and timeline. Books site visits into the broker's calendar and sends a brief before each meeting.",
+    technicalDecision: "Used a structured extraction prompt to reliably pull budget ranges and location preferences from casual conversation, even when buyers are vague.",
+    impact: "Enabled faster lead response and reduced unqualified site visits.",
+    stack: "Next.js · FastAPI · Supabase · Claude API",
+    image: "",
+    gradient: "from-emerald-900/80 to-black",
+    link: "mailto:meetmakwana2004@gmail.com",
+    tag: "Representative",
+    video: {
+      preview: "/videos/lead-agent-preview.mp4",
+      full: "/videos/lead-agent-full.mp4",
+      poster: "/videos/lead-agent-poster.jpg",
+    },
   },
 ];
 
@@ -165,7 +165,7 @@ function CaseStudyCard({ study, index }: { study: CaseStudy; index: number }) {
           </div>
         )}
 
-        {/* Video Preview — shows below screenshot, or as primary if no screenshot */}
+        {/* Video Preview */}
         {study.video && (
           <VideoPreview
             previewSrc={study.video.preview}
@@ -181,6 +181,15 @@ function CaseStudyCard({ study, index }: { study: CaseStudy; index: number }) {
             <div className="text-center px-8">
               <p className="text-white/60 text-sm font-mono uppercase tracking-widest mb-2">Demo coming soon</p>
             </div>
+            {study.tag && (
+              <span className={`absolute top-4 left-4 px-3 py-1 text-[10px] font-black uppercase tracking-widest rounded-full z-10 ${
+                study.tag === 'Shipped' 
+                  ? 'bg-accent text-background' 
+                  : 'bg-foreground/20 text-foreground/80 border border-foreground/10'
+              }`}>
+                {study.tag}
+              </span>
+            )}
           </div>
         )}
       </div>
