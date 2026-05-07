@@ -1,5 +1,5 @@
 import { useInView } from 'react-intersection-observer';
-import { Layers, Database, Cpu, Globe, ArrowRight, User } from 'lucide-react';
+import { MessageCircle, Webhook, Brain, Database, Calendar, Cpu, Users } from 'lucide-react';
 
 export default function Architecture() {
   const { ref, inView } = useInView({
@@ -8,20 +8,21 @@ export default function Architecture() {
   });
 
   const flow = [
-    { name: "User", icon: <User size={20} />, desc: "Intent & Context" },
-    { name: "Frontend", icon: <Globe size={20} />, desc: "Next.js / React UI" },
-    { name: "API", icon: <Layers size={20} />, desc: "FastAPI / Node" },
-    { name: "Database", icon: <Database size={20} />, desc: "PostgreSQL / Vector DB" },
-    { name: "AI Engine", icon: <Cpu size={20} />, desc: "LLMs / RAG Layer" },
-    { name: "Output", icon: <ArrowRight size={20} />, desc: "Autonomous Action" }
+    { name: "User", icon: <MessageCircle size={20} />, desc: "WhatsApp Message" },
+    { name: "Webhook", icon: <Webhook size={20} />, desc: "FastAPI Endpoint" },
+    { name: "Intent", icon: <Brain size={20} />, desc: "Classification" },
+    { name: "Context", icon: <Database size={20} />, desc: "Patient Retrieval" },
+    { name: "Logic", icon: <Calendar size={20} />, desc: "Scheduling Engine" },
+    { name: "AI Engine", icon: <Cpu size={20} />, desc: "LLM Response" },
+    { name: "Handoff", icon: <Users size={20} />, desc: "Escalation" }
   ];
 
   return (
     <section className="py-24 px-6 md:px-12 lg:px-24 bg-background border-t border-foreground/5">
       <div className="max-w-7xl mx-auto">
         <header className="mb-20">
-          <h2 className="text-foreground/30 uppercase tracking-[0.2em] text-sm font-bold mb-4">Architecture Thinking</h2>
-          <p className="text-4xl md:text-5xl font-sans font-bold text-foreground max-w-2xl leading-tight">
+          <h2 className="text-foreground/30 uppercase tracking-[0.2em] text-sm font-display font-bold mb-4">Architecture Thinking</h2>
+          <p className="text-4xl md:text-5xl font-display font-bold text-foreground max-w-2xl leading-tight">
             How I build systems.
           </p>
         </header>

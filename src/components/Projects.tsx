@@ -5,6 +5,7 @@ interface Project {
   outcome: string;
   problem: string;
   solution: string;
+  technicalDecision: string;
   stack: string;
   impact: string;
   image: string;
@@ -19,8 +20,9 @@ const projects: Project[] = [
     outcome: "Autonomous AI CRM for healthcare facilities.",
     problem: "Patient triage and appointment scheduling required constant manual intervention, leading to delays and staff burnout.",
     solution: "Developed an autonomous CRM with an LLM-powered WhatsApp triage bot and intelligent scheduling dispatch.",
+    technicalDecision: "Chose FastAPI and PostgreSQL to ensure scalable, low-latency webhook processing for incoming patient messages.",
     stack: "React, FastAPI, PostgreSQL, LangChain, OpenAI",
-    impact: "Reduced manual scheduling friction and enabled 24/7 autonomous patient triage.",
+    impact: "Automated preliminary patient triage and reduced manual scheduling overhead for clinic staff.",
     image: "/project_99care.png",
     gradient: "from-purple-900 to-black",
     link: "https://99-care.vercel.app",
@@ -28,23 +30,25 @@ const projects: Project[] = [
   },
   {
     title: "StockCast",
-    outcome: "High-precision AI stock forecasting dashboard.",
+    outcome: "AI-powered stock forecasting dashboard with time-series model experimentation.",
     problem: "Retail investors lacked access to institutional-grade, real-time predictive models for stock movements.",
-    solution: "Built a forecasting tool achieving 97%+ accuracy using LSTM and Transformer-based time series models.",
+    solution: "Built an LSTM and Transformer-based forecasting interface with walk-forward validation and real-time visualization.",
+    technicalDecision: "Implemented walk-forward validation to ensure the model generalizes well to unseen sequential market data.",
     stack: "Python, TensorFlow, React, FastAPI, Pandas",
-    impact: "Delivered real-time predictions via a clean web dashboard for immediate decision-making.",
+    impact: "Provided a visual forecasting interface enabling clear tracking of model predictions against actual market movements.",
     image: "/project_stockcast.png",
     gradient: "from-emerald-900 to-black",
     link: "https://github.com/MitMakwana13/StockCast",
-    tag: "97% Accuracy"
+    tag: "Time-Series AI"
   },
   {
     title: "Healthcare Diagnosis",
     outcome: "Real-time AI medical report analysis.",
     problem: "Emergency medical report diagnosis faced critical bottlenecks due to doctor availability constraints.",
     solution: "Deployed a deep learning web application that diagnoses medical reports in real time based on clinical datasets.",
+    technicalDecision: "Utilized PyTorch for custom CNN architecture design, optimizing for high-recall in detecting anomalies.",
     stack: "PyTorch, FastAPI, React, CNNs",
-    impact: "Reduced emergency doctor dependency for preliminary report screening.",
+    impact: "Established a proof-of-concept for preliminary automated screening to support clinical decision-making.",
     image: "/project_healthcare.png",
     gradient: "from-cyan-900 to-black",
     link: "https://github.com/MitMakwana13/Healthcare_Diagnosis"
@@ -56,8 +60,8 @@ export default function Projects() {
     <section id="work" className="py-24 px-6 md:px-12 lg:px-24 bg-background">
       <div className="max-w-7xl mx-auto">
         <header className="mb-20">
-          <h2 className="text-foreground/30 uppercase tracking-[0.2em] text-sm font-bold mb-4">Featured Case Studies</h2>
-          <p className="text-4xl md:text-5xl font-sans font-bold text-foreground max-w-2xl leading-tight">
+          <h2 className="text-foreground/30 uppercase tracking-[0.2em] text-sm font-display font-bold mb-4">Featured Case Studies</h2>
+          <p className="text-4xl md:text-5xl font-display font-bold text-foreground max-w-2xl leading-tight">
             Systems that survive <br />beyond a demo.
           </p>
         </header>
@@ -118,7 +122,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 
       {/* Content Side */}
       <div className="lg:col-span-5 flex flex-col justify-center">
-        <h3 className="text-3xl md:text-4xl font-sans font-black text-foreground mb-2 group-hover:text-accent transition-colors duration-300 tracking-tighter">
+        <h3 className="text-3xl md:text-4xl font-display font-black text-foreground mb-2 group-hover:text-accent transition-colors duration-300 tracking-tighter">
           {project.title}
         </h3>
         <p className="text-muted text-sm md:text-base mb-8 font-medium">
@@ -133,6 +137,10 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           <div>
             <h4 className="text-[10px] uppercase tracking-widest text-foreground/50 font-bold mb-1">Solution</h4>
             <p className="text-sm text-foreground/80 leading-relaxed">{project.solution}</p>
+          </div>
+          <div>
+            <h4 className="text-[10px] uppercase tracking-widest text-foreground/50 font-bold mb-1">Technical Decision</h4>
+            <p className="text-sm text-foreground/80 leading-relaxed">{project.technicalDecision}</p>
           </div>
           <div>
             <h4 className="text-[10px] uppercase tracking-widest text-foreground/50 font-bold mb-1">Impact</h4>

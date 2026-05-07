@@ -1,73 +1,48 @@
-# React + TypeScript + Vite
+# Mit Makwana | AI Systems Engineer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **Live URL:** [mit-portfolio-nu.vercel.app](https://mit-portfolio-nu.vercel.app/)
 
-Currently, two official plugins are available:
+## Positioning
+This repository contains the source code for my professional portfolio. The design and messaging are positioned to reflect my core expertise as an **AI Systems Engineer**. It moves beyond standard interface development to highlight the ability to design and build intelligent systems that connect workflows, data, automation, and AI models into usable, production-ready products.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
+- **Frontend Framework:** React 19 + TypeScript
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS v4 (Mobile-first, fully responsive)
+- **Icons:** Lucide React
+- **Animations:** Custom CSS transitions + React Intersection Observer
+- **Deployment:** Vercel (CI/CD connected to `main` branch)
 
-## React Compiler
+## Main Sections
+1. **Hero:** High-impact executive positioning and primary CTAs.
+2. **Core Competencies ("Systems I Build"):** Focus on AI Workflow Automation, Custom LLM Agents, RAG Knowledge Systems, and Full-Stack AI Products.
+3. **Featured Case Studies:** Grounded, verifiable projects detailing Problem, Solution, Technical Decision, and Impact.
+4. **Architecture Thinking:** Visual breakdown of a real-world LLM/WhatsApp CRM data flow (User → Webhook → Intent → Context → Logic → AI Engine → Handoff).
+5. **Credentials:** Validated certifications and professional growth.
+6. **Technical Stack:** Cleanly categorized (Frontend, Backend, AI, Automation, Cloud).
+7. **Contact / "Why Work With Me":** Final conversion section and direct communication links.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Local Setup
 
-## Expanding the ESLint configuration
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/MitMakwana13/Mit-Portfolio.git
+   cd Mit-Portfolio
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+   The application will be available at `http://localhost:5173`.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Deployment Notes
+This project is configured for seamless deployment on **Vercel**. 
+- It includes a `vercel.json` file to ensure client-side routing fallback works properly.
+- Any pushes to the `main` branch will automatically trigger a new production build.
+- The `public` folder contains static assets, including the downloadable resume PDF.
