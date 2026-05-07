@@ -34,7 +34,7 @@ const caseStudies: CaseStudy[] = [
     image: "/project_99care.png",
     gradient: "from-purple-900/80 to-black",
     link: "https://99-care.vercel.app",
-    tag: "Live",
+    tag: "Prototype",
     video: {
       preview: "/videos/ai-receptionist-preview.mp4",
       full: "/videos/ai-receptionist-full.mp4",
@@ -155,7 +155,7 @@ function CaseStudyCard({ study, index }: { study: CaseStudy; index: number }) {
             </a>
             {study.tag && (
               <span className={`absolute top-4 left-4 px-3 py-1 text-[10px] font-black uppercase tracking-widest rounded-full z-10 ${
-                study.tag === 'Live' 
+                study.tag === 'Shipped' || study.tag === 'Prototype'
                   ? 'bg-accent text-background' 
                   : 'bg-foreground/20 text-foreground/80 border border-foreground/10'
               }`}>
