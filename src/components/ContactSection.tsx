@@ -18,8 +18,11 @@ export default function ContactSection() {
         <div ref={aboutRef} className="lg:w-[50%]">
           <div className={aboutInView ? 'animate-fade-up' : 'reveal-hidden'}>
             <h2 className="text-foreground/30 uppercase tracking-[0.2em] text-sm font-bold mb-10">Why Work With Me</h2>
-            <p className="text-2xl md:text-3xl lg:text-4xl text-foreground font-medium leading-tight mb-8">
-              I do not just build interfaces. I design <span className="text-accent">intelligent systems</span> that connect workflows, data, automation, and AI models into usable products.
+            <p className="text-2xl md:text-3xl lg:text-4xl text-foreground font-medium leading-tight mb-6">
+              I build AI systems that convert fragmented operations into scalable, <span className="text-accent">intelligent workflows.</span>
+            </p>
+            <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-2xl mb-4 font-medium">
+              I do not just build interfaces. I design systems that connect workflows, data, automation, and AI models into usable products.
             </p>
             <p className="text-lg md:text-xl text-muted leading-relaxed max-w-2xl">
               My focus is simple: reduce operational friction, improve decision-making, and ship systems that can actually survive beyond a demo.

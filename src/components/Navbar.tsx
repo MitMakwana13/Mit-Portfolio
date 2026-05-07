@@ -50,6 +50,15 @@ export default function Navbar() {
               </a>
             ))}
             
+            <a 
+              href="/Mit_Makwana_Resume.pdf" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-sm font-bold uppercase tracking-widest text-foreground border border-foreground/20 px-4 py-2 hover:bg-foreground hover:text-background transition-all duration-300"
+            >
+              Resume
+            </a>
+            
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
@@ -102,6 +111,15 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
+          <a
+            href="/Mit_Makwana_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="text-4xl font-black uppercase tracking-tighter text-accent hover:text-foreground transition-colors mt-4"
+          >
+            RESUME ↗
+          </a>
         </div>
       </div>
     </>

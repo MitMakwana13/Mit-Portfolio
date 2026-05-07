@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Marquee from './components/Marquee';
 import Services from './components/Services';
 import Projects from './components/Projects';
+import Architecture from './components/Architecture';
 import Skills from './components/Skills';
 import Certificates from './components/Certificates';
 import Experience from './components/Experience';
@@ -23,6 +24,7 @@ function App() {
           <Marquee />
           <Services />
           <Projects />
+          <Architecture />
           <Experience />
           <Skills />
           <Certificates />
