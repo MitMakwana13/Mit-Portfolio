@@ -21,17 +21,19 @@ export default function Hero() {
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-display font-semibold text-foreground tracking-tight leading-[1.2] mb-8 max-w-2xl">
                 Hi, I'm Mit.
                 <br />
-                I build AI agents,
+                I build AI systems,
                 <br className="hidden sm:block" />
-                {" "}automation systems,
+                {" "}full-stack products,
                 <br className="hidden sm:block" />
-                {" "}RAG apps, and niche websites.
+                {" "}niche websites, and
+                <br className="hidden sm:block" />
+                {" "}automation tools.
               </h1>
             </div>
 
             <div className={isMounted ? 'animate-fade-up delay-200' : 'reveal-hidden'}>
               <p className="text-lg md:text-xl text-muted mb-10 max-w-xl leading-relaxed">
-                Practical systems that reduce repetitive work, improve workflows, and turn ideas into deployed products.
+                From AI agents and RAG apps to dashboards, websites, workflow tools, and custom MVPs — I turn ideas into deployed software.
               </p>
             </div>
 

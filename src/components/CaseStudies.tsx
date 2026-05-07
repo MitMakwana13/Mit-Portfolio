@@ -1,4 +1,5 @@
 import { useInView } from 'react-intersection-observer';
+import VideoPreview from './VideoPreview';
 
 interface CaseStudy {
   title: string;
@@ -12,8 +13,12 @@ interface CaseStudy {
   image: string;
   gradient: string;
   link: string;
-  videoPlaceholder?: string;
   tag?: string;
+  video?: {
+    preview: string;
+    full: string;
+    poster: string;
+  };
 }
 
 const caseStudies: CaseStudy[] = [
@@ -30,6 +35,11 @@ const caseStudies: CaseStudy[] = [
     gradient: "from-purple-900/80 to-black",
     link: "https://99-care.vercel.app",
     tag: "Live",
+    video: {
+      preview: "/videos/ai-receptionist-preview.mp4",
+      full: "/videos/ai-receptionist-full.mp4",
+      poster: "/videos/ai-receptionist-poster.jpg",
+    },
   },
   {
     title: "AI Lead Qualification Agent",
@@ -44,6 +54,11 @@ const caseStudies: CaseStudy[] = [
     gradient: "from-emerald-900/80 to-black",
     link: "mailto:meetmakwana2004@gmail.com",
     tag: "Representative",
+    video: {
+      preview: "/videos/lead-agent-preview.mp4",
+      full: "/videos/lead-agent-full.mp4",
+      poster: "/videos/lead-agent-poster.jpg",
+    },
   },
   {
     title: "Internal Knowledge Agent",
@@ -58,6 +73,39 @@ const caseStudies: CaseStudy[] = [
     gradient: "from-cyan-900/80 to-black",
     link: "mailto:meetmakwana2004@gmail.com",
     tag: "Representative",
+    video: {
+      preview: "/videos/rag-demo-preview.mp4",
+      full: "/videos/rag-demo-full.mp4",
+      poster: "/videos/rag-demo-poster.jpg",
+    },
+  },
+  {
+    title: "Niche Community Platform",
+    industry: "Social · Gujarati Diaspora",
+    outcome: "A full-stack community platform connecting Gujarati professionals globally.",
+    problem: "Gujarati professionals worldwide had no dedicated platform to network, share opportunities, and collaborate. Generic social networks diluted community identity.",
+    solution: "Built a complete web application with user profiles, posts, event listings, and community features. Mobile-first design with modern UI and real-time content.",
+    technicalDecision: "Used Next.js for SSR/SEO, Supabase for auth and real-time data, and Tailwind CSS for rapid UI iteration. Implemented role-based access for community moderation.",
+    impact: "Launched to initial beta users with functional profiles, feeds, and community engagement features.",
+    stack: "Next.js · TypeScript · Supabase · Tailwind CSS · Vercel",
+    image: "",
+    gradient: "from-amber-900/80 to-black",
+    link: "https://github.com/MitMakwana13",
+    tag: "Shipped",
+  },
+  {
+    title: "AI-Powered Stock Forecasting",
+    industry: "Finance · ML Prototype",
+    outcome: "Time-series forecasting dashboard with LSTM and Transformer model experimentation.",
+    problem: "Traditional stock analysis tools rely on static indicators. There was no accessible interface for comparing deep learning forecasting models side-by-side.",
+    solution: "Built a forecasting dashboard that runs LSTM and Transformer-based models on historical stock data. Includes walk-forward validation, real-time visualization, and model comparison.",
+    technicalDecision: "Implemented walk-forward validation to prevent look-ahead bias. Used PyTorch for model training and React for the interactive visualization layer.",
+    impact: "Demonstrated practical ML model comparison workflows for time-series data in an accessible interface.",
+    stack: "React · Python · PyTorch · TensorFlow · FastAPI",
+    image: "",
+    gradient: "from-rose-900/80 to-black",
+    link: "https://github.com/MitMakwana13",
+    tag: "ML Prototype",
   },
 ];
 
@@ -89,12 +137,13 @@ function CaseStudyCard({ study, index }: { study: CaseStudy; index: number }) {
     <div
       ref={ref}
       style={{ animationDelay: `${index * 100}ms` }}
-      className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center group ${inView ? 'animate-fade-up' : 'reveal-hidden'}`}
+      className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start group ${inView ? 'animate-fade-up' : 'reveal-hidden'}`}
     >
       {/* Visual Side */}
-      <div className="lg:col-span-7">
-        <div className="relative overflow-hidden aspect-[16/10] bg-card rounded-sm shadow-2xl">
-          {study.image ? (
+      <div className="lg:col-span-7 space-y-4">
+        {/* Project Screenshot */}
+        {study.image && (
+          <div className="relative overflow-hidden aspect-[16/10] bg-card rounded-sm shadow-2xl">
             <a href={study.link} target="_blank" rel="noopener noreferrer" className="block w-full h-full">
               <img
                 src={study.image}
@@ -104,25 +153,36 @@ function CaseStudyCard({ study, index }: { study: CaseStudy; index: number }) {
               />
               <div className={`absolute inset-0 bg-gradient-to-br ${study.gradient} opacity-30 group-hover:opacity-10 transition-opacity duration-500`} />
             </a>
-          ) : (
-            <div className={`absolute inset-0 bg-gradient-to-br ${study.gradient} flex items-center justify-center`}>
-              <div className="text-center px-8">
-                <p className="text-white/60 text-sm font-mono uppercase tracking-widest mb-2">Video walkthrough</p>
-                <p className="text-white/40 text-xs">Coming soon — recording in progress</p>
-              </div>
-            </div>
-          )}
+            {study.tag && (
+              <span className={`absolute top-4 left-4 px-3 py-1 text-[10px] font-black uppercase tracking-widest rounded-full z-10 ${
+                study.tag === 'Live' 
+                  ? 'bg-accent text-background' 
+                  : 'bg-foreground/20 text-foreground/80 border border-foreground/10'
+              }`}>
+                {study.tag}
+              </span>
+            )}
+          </div>
+        )}
 
-          {study.tag && (
-            <span className={`absolute top-4 left-4 px-3 py-1 text-[10px] font-black uppercase tracking-widest rounded-full z-10 ${
-              study.tag === 'Live' 
-                ? 'bg-accent text-background' 
-                : 'bg-foreground/20 text-foreground/80 border border-foreground/10'
-            }`}>
-              {study.tag}
-            </span>
-          )}
-        </div>
+        {/* Video Preview — shows below screenshot, or as primary if no screenshot */}
+        {study.video && (
+          <VideoPreview
+            previewSrc={study.video.preview}
+            fullSrc={study.video.full}
+            posterSrc={study.video.poster}
+            title={study.title}
+          />
+        )}
+
+        {/* Gradient placeholder for studies with no image and no video */}
+        {!study.image && !study.video && (
+          <div className={`relative overflow-hidden aspect-[16/10] bg-gradient-to-br ${study.gradient} rounded-sm flex items-center justify-center`}>
+            <div className="text-center px-8">
+              <p className="text-white/60 text-sm font-mono uppercase tracking-widest mb-2">Demo coming soon</p>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Content Side */}

@@ -1,50 +1,72 @@
 import { useInView } from 'react-intersection-observer';
-import { MessageSquare, Sparkles, BookOpen, Wrench } from 'lucide-react';
+import { Bot, BookOpen, Workflow, Globe, Code2, BarChart3 } from 'lucide-react';
 
 const offers = [
   {
-    icon: <MessageSquare size={28} />,
-    title: "Customer Support Agent",
-    outcome: "Answer every customer 24/7 — without hiring.",
+    icon: <Bot size={24} />,
+    title: "AI Agents & Assistants",
+    outcome: "Chatbots, receptionists, lead agents, support agents, and workflow assistants.",
     bullets: [
-      "Handles bookings, FAQs, refunds, order status, cancellations",
-      "Works on WhatsApp, web chat, email, or all three",
-      "Hands off to a human when it should",
+      "Customer-facing agents for bookings, FAQs, qualification",
+      "Internal assistants for team workflows and operations",
+      "Works on WhatsApp, web chat, Slack, or email",
     ],
-    usedBy: "Clinics · Salons · E-commerce · Hotels · Repair services",
+    usedBy: "Clinics · Salons · E-commerce · SaaS · Agencies",
   },
   {
-    icon: <Sparkles size={28} />,
-    title: "Inbound Lead Agent",
-    outcome: "Qualify every lead the moment it lands.",
+    icon: <BookOpen size={24} />,
+    title: "RAG & Knowledge Systems",
+    outcome: "Document Q&A, internal search, SOP assistants, and research tools.",
     bullets: [
-      "Qualifies leads in 3–5 conversational turns",
-      "Books discovery calls automatically into your calendar",
-      "Sends you a brief before each call so you walk in prepared",
-    ],
-    usedBy: "Real Estate · Agencies · SaaS · Consultants · Law Firms",
-  },
-  {
-    icon: <BookOpen size={28} />,
-    title: "Internal Knowledge Agent",
-    outcome: "Stop your team asking the same question twice.",
-    bullets: [
-      "Upload your SOPs, contracts, manuals, past projects",
-      "Staff queries via Slack, Teams, or web chat",
-      "Every answer cited to the source document",
+      "Upload docs, SOPs, contracts, manuals, past projects",
+      "Get cited answers grounded in your actual data",
+      "Deploy as web chat, Slack bot, or API",
     ],
     usedBy: "Law Firms · Accountants · Agencies · Manufacturing",
   },
   {
-    icon: <Wrench size={28} />,
-    title: "Custom AI Build",
-    outcome: "Got something specific? Let's scope it.",
+    icon: <Workflow size={24} />,
+    title: "Automation & Workflow Tools",
+    outcome: "CRM automation, email workflows, reporting systems, and task pipelines.",
     bullets: [
-      "Multi-system builds with custom integrations",
-      "Connects to your existing tools (CRM, ERP, accounting)",
-      "For workflows the three above don't cover",
+      "Automate lead qualification, follow-ups, notifications",
+      "Connect to existing CRM, ERP, or accounting tools",
+      "Build custom pipelines for operations teams",
     ],
-    usedBy: "Any business with a unique workflow",
+    usedBy: "Real Estate · SaaS · E-commerce · Operations teams",
+  },
+  {
+    icon: <Globe size={24} />,
+    title: "Websites & Product Interfaces",
+    outcome: "Niche websites, landing pages, dashboards, portfolios, and startup MVPs.",
+    bullets: [
+      "High-converting landing pages and business sites",
+      "Product dashboards with real-time data",
+      "Mobile-first, SEO-ready, premium design",
+    ],
+    usedBy: "Startups · Service businesses · Communities · Products",
+  },
+  {
+    icon: <Code2 size={24} />,
+    title: "Full-Stack Applications",
+    outcome: "Admin portals, business apps, internal tools, and SaaS prototypes.",
+    bullets: [
+      "Complete web apps with auth, database, and API",
+      "Admin panels and internal business tools",
+      "SaaS prototypes and MVPs shipped in weeks",
+    ],
+    usedBy: "Startups · SMBs · Internal teams · Product builders",
+  },
+  {
+    icon: <BarChart3 size={24} />,
+    title: "ML / Data Products",
+    outcome: "Prediction models, classification systems, analytics dashboards, and CV tools.",
+    bullets: [
+      "Time-series forecasting, text classification, image recognition",
+      "Model training, evaluation, and deployment",
+      "Analytics dashboards with visual insights",
+    ],
+    usedBy: "Healthcare · Finance · Manufacturing · Research",
   },
 ];
 
@@ -57,53 +79,52 @@ export default function Offers() {
         <header className="mb-20">
           <h2 className="text-muted uppercase tracking-[0.2em] text-xs font-mono mb-4">What I build</h2>
           <p className="text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground tracking-tight leading-[1.15] max-w-3xl">
-            Three core systems. Plus anything custom you need.
+            Not just CRM automation. Here's the full picture.
+          </p>
+          <p className="text-muted text-base mt-6 max-w-2xl leading-relaxed">
+            The demos below use business workflows because they're easy to understand, but my work spans AI tools, full-stack apps, dashboards, niche websites, document assistants, and custom MVPs across different domains.
           </p>
         </header>
 
         <div 
           ref={ref}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {offers.map((offer, idx) => (
             <div
               key={idx}
-              style={{ animationDelay: `${idx * 100}ms` }}
-              className={`bg-card border border-foreground/5 rounded-sm p-8 md:p-10 hover:border-accent transition-colors duration-300 group ${
+              style={{ animationDelay: `${idx * 80}ms` }}
+              className={`bg-card border border-foreground/5 rounded-sm p-8 hover:border-accent transition-colors duration-300 group ${
                 inView ? 'animate-fade-up' : 'reveal-hidden'
               }`}
             >
-              <div className="text-accent mb-6 group-hover:scale-110 transition-transform duration-300 origin-left">
+              <div className="text-accent opacity-50 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 mb-5 origin-left">
                 {offer.icon}
               </div>
 
-              <h3 className="text-xl font-bold text-foreground mb-3 tracking-tight group-hover:text-accent transition-colors duration-300">
+              <h3 className="text-lg font-bold text-foreground mb-2 tracking-tight group-hover:text-accent transition-colors duration-300">
                 {offer.title}
               </h3>
 
-              <p className="text-base text-foreground/80 font-medium mb-6">
+              <p className="text-sm text-muted mb-5">
                 {offer.outcome}
               </p>
 
-              <ul className="space-y-2 mb-8">
+              <ul className="space-y-2 mb-6">
                 {offer.bullets.map((bullet, i) => (
-                  <li key={i} className="flex items-start gap-3 text-sm text-muted leading-relaxed">
-                    <span className="text-accent mt-1 text-xs">✓</span>
+                  <li key={i} className="flex items-start gap-3 text-xs text-foreground/60 leading-relaxed">
+                    <span className="text-accent mt-0.5 text-[10px]">✓</span>
                     {bullet}
                   </li>
                 ))}
               </ul>
 
-              <p className="text-[10px] uppercase tracking-[0.15em] font-bold text-foreground/30">
+              <p className="text-[10px] uppercase tracking-[0.15em] font-bold text-foreground/20">
                 {offer.usedBy}
               </p>
             </div>
           ))}
         </div>
-
-        <p className="text-muted text-base mt-12 max-w-2xl leading-relaxed">
-          Don't see your industry? These work for any business with humans doing repetitive things. <a href="mailto:meetmakwana2004@gmail.com" className="text-accent hover:underline">Reach out</a> — I'll tell you in 5 minutes whether AI fits.
-        </p>
       </div>
     </section>
   );
