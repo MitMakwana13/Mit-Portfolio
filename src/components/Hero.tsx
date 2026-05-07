@@ -18,7 +18,7 @@ export default function Hero() {
 
         <div className={isMounted ? 'animate-fade-up delay-200' : 'reveal-hidden'}>
           <p className="text-lg md:text-2xl text-muted font-medium mb-12 max-w-3xl leading-relaxed">
-            I specialize in LLM agents, workflow automation, RAG systems, and production-ready web platforms for businesses that want to move faster with AI.
+            I specialize in AI systems, automation, and niche websites for businesses that need high-converting digital infrastructure.
           </p>
         </div>
 

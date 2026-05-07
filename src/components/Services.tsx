@@ -56,6 +56,21 @@ export default function Services() {
           <circle cx="36" cy="11.5" r="2" fill="currentColor" opacity="0.5"/>
         </svg>
       )
+    },
+    {
+      title: 'Niche Business Websites',
+      desc: 'High-converting websites for specialized businesses, built with modern UI, clear positioning, SEO-ready structure, and fast performance.',
+      icon: '05',
+      svg: (
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" className="stroke-accent">
+          <rect x="4" y="6" width="40" height="36" rx="4" strokeWidth="1.5"/>
+          <line x1="4" y1="16" x2="44" y2="16" strokeWidth="1.5"/>
+          <circle cx="10" cy="11" r="1.5" fill="currentColor"/>
+          <circle cx="16" cy="11" r="1.5" fill="currentColor"/>
+          <circle cx="22" cy="11" r="1.5" fill="currentColor"/>
+          <rect x="12" y="24" width="24" height="12" rx="2" strokeWidth="1.5"/>
+        </svg>
+      )
     }
   ];
 
@@ -76,7 +91,7 @@ export default function Services() {
 
         <div 
           ref={ref}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {services.map((s, idx) => (
             <div
