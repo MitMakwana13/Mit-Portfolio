@@ -3,8 +3,8 @@ import { useInView } from 'react-intersection-observer';
 export default function Services() {
   const services = [
     {
-      title: 'Operational Intelligence',
-      desc: 'Architecting autonomous workflows and custom LLM agents to eliminate manual friction and drive systemic efficiency.',
+      title: 'AI Workflow Automation',
+      desc: 'Replace repetitive manual tasks with automated decision flows.',
       icon: '01',
       svg: (
         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" className="stroke-accent">
@@ -18,8 +18,8 @@ export default function Services() {
       )
     },
     {
-      title: 'AI System Integration',
-      desc: 'Deploying high-precision Machine Learning models and RAG-integrated systems into existing enterprise architectures.',
+      title: 'Custom LLM Agents',
+      desc: 'Build assistants that reason across documents, tools, and business logic.',
       icon: '02',
       svg: (
         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" className="stroke-accent">
@@ -33,8 +33,8 @@ export default function Services() {
       )
     },
     {
-      title: 'Digital Experience Engineering',
-      desc: 'Crafting premium, high-conversion web interfaces that bridge the gap between complex logic and elite aesthetics.',
+      title: 'RAG Knowledge Systems',
+      desc: 'Connect company data to reliable AI search and answers.',
       icon: '03',
       svg: (
         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" className="stroke-accent">
@@ -45,8 +45,8 @@ export default function Services() {
       )
     },
     {
-      title: 'Full-Stack Architecture',
-      desc: 'Building robust, scalable software ecosystems with a focus on precision, security, and research-grade performance.',
+      title: 'Full-Stack AI Products',
+      desc: 'Ship production apps using modern frontend, backend, database, and cloud stacks.',
       icon: '04',
       svg: (
         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" className="stroke-accent">
@@ -65,18 +65,18 @@ export default function Services() {
   });
 
   return (
-    <section id="services" className="py-24 px-6 md:px-12 lg:px-24 bg-background overflow-hidden">
+    <section id="services" className="py-24 px-6 md:px-12 lg:px-24 bg-background overflow-hidden border-t border-foreground/5">
       <div className="max-w-7xl mx-auto">
         <header className="mb-20">
-          <h2 className="text-foreground/30 uppercase tracking-[0.2em] text-sm font-bold mb-4">What I Do</h2>
-          <p className="text-4xl md:text-6xl font-sans font-black text-foreground leading-[0.9] tracking-tighter">
-            Bespoke digital <br />intelligence.
+          <h2 className="text-foreground/30 uppercase tracking-[0.2em] text-sm font-bold mb-4">Core Competencies</h2>
+          <p className="text-4xl md:text-5xl font-sans font-black text-foreground leading-[1.1] tracking-tighter">
+            Systems I Build.
           </p>
         </header>
 
         <div 
           ref={ref}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           {services.map((s, idx) => (
             <div

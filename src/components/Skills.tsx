@@ -2,20 +2,24 @@ import { useInView } from 'react-intersection-observer';
 
 const skillCategories = [
   {
-    title: "Languages & Data",
-    skills: ["Python", "Java", "JavaScript", "TypeScript", "SQL", "MongoDB"]
+    title: "Frontend",
+    skills: ["Next.js", "React", "Tailwind", "TypeScript"]
   },
   {
-    title: "AI / ML",
-    skills: ["Machine Learning", "Deep Learning", "NLP", "GANs", "LLMs", "Transformer Models", "Prompt Engineering", "AI Model Deployment", "Model Optimization"]
+    title: "Backend",
+    skills: ["FastAPI", "Node.js", "Supabase", "PostgreSQL"]
   },
   {
-    title: "Frameworks & Tools",
-    skills: ["TensorFlow", "PyTorch", "Scikit-learn", "Hugging Face", "LangChain", "RAG"]
+    title: "AI",
+    skills: ["OpenAI", "Anthropic", "RAG", "Agents", "Embeddings"]
   },
   {
-    title: "Engineering",
-    skills: ["Full-Stack Development", "React", "Node.js", "FastAPI", "Git", "Docker", "Jupyter"]
+    title: "Automation",
+    skills: ["n8n", "Workflow Orchestration", "API Integrations"]
+  },
+  {
+    title: "Cloud",
+    skills: ["Vercel", "Railway", "AWS-ready Architecture"]
   }
 ];
 
