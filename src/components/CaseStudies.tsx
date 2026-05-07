@@ -12,8 +12,10 @@ interface CaseStudy {
   stack: string;
   image: string;
   gradient: string;
-  link: string;
   tag?: string;
+  ctaLabel: string;
+  ctaLink: string;
+  ctaExternal?: boolean;
   video?: {
     preview: string;
     full: string;
@@ -33,8 +35,9 @@ const caseStudies: CaseStudy[] = [
     stack: "React · FastAPI · PostgreSQL · LangChain · OpenAI",
     image: "/project_99care.png",
     gradient: "from-purple-900/80 to-black",
-    link: "https://99-care.vercel.app",
     tag: "Prototype",
+    ctaLabel: "Open prototype demo",
+    ctaLink: "#demos",
     video: {
       preview: "/videos/ai-receptionist-preview.mp4",
       full: "/videos/ai-receptionist-full.mp4",
@@ -52,8 +55,10 @@ const caseStudies: CaseStudy[] = [
     stack: "Next.js · TypeScript · Supabase · Tailwind CSS · Vercel",
     image: "",
     gradient: "from-amber-900/80 to-black",
-    link: "https://github.com/MitMakwana13",
     tag: "Shipped",
+    ctaLabel: "View project",
+    ctaLink: "https://github.com/MitMakwana13",
+    ctaExternal: true,
   },
   {
     title: "Internal Knowledge Agent",
@@ -66,8 +71,9 @@ const caseStudies: CaseStudy[] = [
     stack: "Next.js · Supabase pgvector · OpenAI Embeddings · Claude",
     image: "",
     gradient: "from-cyan-900/80 to-black",
-    link: "mailto:meetmakwana2004@gmail.com",
     tag: "Representative",
+    ctaLabel: "Open prototype demo",
+    ctaLink: "#demos",
     video: {
       preview: "/videos/rag-demo-preview.mp4",
       full: "/videos/rag-demo-full.mp4",
@@ -85,8 +91,10 @@ const caseStudies: CaseStudy[] = [
     stack: "React · Python · PyTorch · TensorFlow · FastAPI",
     image: "",
     gradient: "from-rose-900/80 to-black",
-    link: "https://github.com/MitMakwana13",
     tag: "ML Prototype",
+    ctaLabel: "View prototype",
+    ctaLink: "https://github.com/MitMakwana13",
+    ctaExternal: true,
   },
   {
     title: "AI Lead Qualification Agent",
@@ -99,8 +107,9 @@ const caseStudies: CaseStudy[] = [
     stack: "Next.js · FastAPI · Supabase · Claude API",
     image: "",
     gradient: "from-emerald-900/80 to-black",
-    link: "mailto:meetmakwana2004@gmail.com",
     tag: "Representative",
+    ctaLabel: "Open prototype demo",
+    ctaLink: "#demos",
     video: {
       preview: "/videos/lead-agent-preview.mp4",
       full: "/videos/lead-agent-full.mp4",
@@ -144,7 +153,7 @@ function CaseStudyCard({ study, index }: { study: CaseStudy; index: number }) {
         {/* Project Screenshot */}
         {study.image && (
           <div className="relative overflow-hidden aspect-[16/10] bg-card rounded-sm shadow-2xl">
-            <a href={study.link} target="_blank" rel="noopener noreferrer" className="block w-full h-full">
+            <a href={study.ctaLink} {...(study.ctaExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})} className="block w-full h-full">
               <img
                 src={study.image}
                 alt={study.title}
@@ -221,23 +230,13 @@ function CaseStudyCard({ study, index }: { study: CaseStudy; index: number }) {
           </div>
         </div>
 
-        {study.link.startsWith('http') ? (
-          <a
-            href={study.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-foreground text-xs uppercase font-bold tracking-[0.2em] hover:text-accent transition-colors duration-300 w-fit group/btn focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none"
-          >
-            View live project <span className="group-hover/btn:translate-x-2 transition-transform duration-300">→</span>
-          </a>
-        ) : (
-          <a
-            href={study.link}
-            className="inline-flex items-center gap-2 text-foreground text-xs uppercase font-bold tracking-[0.2em] hover:text-accent transition-colors duration-300 w-fit group/btn focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none"
-          >
-            Get a quote for this <span className="group-hover/btn:translate-x-2 transition-transform duration-300">→</span>
-          </a>
-        )}
+        <a
+          href={study.ctaLink}
+          {...(study.ctaExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+          className="inline-flex items-center gap-2 text-foreground text-xs uppercase font-bold tracking-[0.2em] hover:text-accent transition-colors duration-300 w-fit group/btn focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none"
+        >
+          {study.ctaLabel} <span className="group-hover/btn:translate-x-2 transition-transform duration-300">→</span>
+        </a>
       </div>
     </div>
   );

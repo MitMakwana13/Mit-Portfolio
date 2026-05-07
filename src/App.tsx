@@ -12,23 +12,27 @@ import Proof from './components/Proof';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import DemoReelReceptionist from './components/DemoReelReceptionist';
+import DemoReelRAG from './components/DemoReelRAG';
 import './App.css';
 
 function App() {
-  const [isDemoReel, setIsDemoReel] = useState(false);
+  const [route, setRoute] = useState('');
 
   useEffect(() => {
     const checkHash = () => {
-      setIsDemoReel(window.location.hash === '#/demo-reel');
+      setRoute(window.location.hash);
     };
     checkHash();
     window.addEventListener('hashchange', checkHash);
     return () => window.removeEventListener('hashchange', checkHash);
   }, []);
 
-  // Hidden demo recording page — not linked from portfolio UI
-  if (isDemoReel) {
+  // Hidden demo recording pages — not linked from portfolio UI
+  if (route === '#/demo-reel') {
     return <DemoReelReceptionist />;
+  }
+  if (route === '#/demo-reel-rag') {
+    return <DemoReelRAG />;
   }
 
   return (
