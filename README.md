@@ -1,48 +1,44 @@
-# Mit Makwana | AI Systems Engineer Portfolio
+# Mit Makwana — AI Agents & Automation Systems
 
 > **Live URL:** [mit-portfolio-nu.vercel.app](https://mit-portfolio-nu.vercel.app/)
 
 ## Positioning
-This repository contains the source code for my professional portfolio. The design and messaging are positioned to reflect my core expertise as an **AI Systems Engineer**. It moves beyond standard interface development to highlight the ability to design and build intelligent systems that connect workflows, data, automation, and AI models into usable, production-ready products.
+
+I ship AI agents and automation systems that take repetitive work off your team. Customer support, lead qualification, document Q&A, internal automation — built in 2 to 4 weeks, deployed to your cloud.
 
 ## Tech Stack
-- **Frontend Framework:** React 19 + TypeScript
-- **Build Tool:** Vite
-- **Styling:** Tailwind CSS v4 (Mobile-first, fully responsive)
-- **Icons:** Lucide React
-- **Animations:** Custom CSS transitions + React Intersection Observer
-- **Deployment:** Vercel (CI/CD connected to `main` branch)
 
-## Main Sections
-1. **Hero:** High-impact executive positioning and primary CTAs.
-2. **Core Competencies ("Systems I Build"):** Focus on AI Workflow Automation, Custom LLM Agents, RAG Knowledge Systems, and Full-Stack AI Products.
-3. **Featured Case Studies:** Grounded, verifiable projects detailing Problem, Solution, Technical Decision, and Impact.
-4. **Architecture Thinking:** Visual breakdown of a real-world LLM/WhatsApp CRM data flow (User → Webhook → Intent → Context → Logic → AI Engine → Handoff).
-5. **Credentials:** Validated certifications and professional growth.
-6. **Technical Stack:** Cleanly categorized (Frontend, Backend, AI, Automation, Cloud).
-7. **Contact / "Why Work With Me":** Final conversion section and direct communication links.
+- **Frontend:** React 19 + TypeScript
+- **Build:** Vite 8
+- **Styling:** Tailwind CSS 4 with `@theme` (Satoshi, Clash Display, JetBrains Mono)
+- **Icons:** Lucide React
+- **Animations:** CSS transitions + React Intersection Observer
+- **Deploy:** Vercel (free tier, CI/CD via `main` branch)
+- **Cost:** $0/month — fully static, no backend, no API keys
+
+## Sections
+
+1. **Hero** — Outcome-focused positioning + live static WhatsApp chat mockup
+2. **Offers** — 4 productized services (Customer Support Agent, Lead Agent, Knowledge Agent, Custom Build)
+3. **Interactive Demos** — Tabbed static simulations: AI Receptionist, RAG Knowledge Agent, Automation Workflow
+4. **Case Studies** — 3 real/representative projects with Problem → Solution → Technical Decision structure
+5. **Process** — Discovery → Quote → Build engagement model
+6. **Experience** — Education + internship timeline
+7. **Proof** — Verified credentials, tech stack, direct links (Resume, GitHub, LinkedIn)
+8. **FAQ** — 9 real buyer objections answered honestly
+9. **Footer** — CTA + contact links + site navigation
 
 ## Local Setup
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/MitMakwana13/Mit-Portfolio.git
-   cd Mit-Portfolio
-   ```
+```bash
+git clone https://github.com/MitMakwana13/Mit-Portfolio.git
+cd Mit-Portfolio
+npm install
+npm run dev
+```
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+Dev server runs at `http://localhost:5173`.
 
-3. **Run the development server:**
-   ```bash
-   npm run dev
-   ```
-   The application will be available at `http://localhost:5173`.
+## Deploy
 
-## Deployment Notes
-This project is configured for seamless deployment on **Vercel**. 
-- It includes a `vercel.json` file to ensure client-side routing fallback works properly.
-- Any pushes to the `main` branch will automatically trigger a new production build.
-- The `public` folder contains static assets, including the downloadable resume PDF.
+Push to `main` → Vercel auto-deploys. No environment variables needed. No API keys. No database.
