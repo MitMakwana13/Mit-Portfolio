@@ -26,6 +26,12 @@ export default function VideoPreview({ previewSrc, fullSrc, posterSrc, title, la
     }
   }, [inView, hasPreview]);
 
+  // Check if video can actually load
+  const handleVideoError = () => {
+    // Only hide preview if the mp4 source truly can't load
+    setHasPreview(false);
+  };
+
   return (
     <>
       <div ref={inViewRef} className="relative overflow-hidden rounded-sm bg-card border border-foreground/5 group">
@@ -37,14 +43,12 @@ export default function VideoPreview({ previewSrc, fullSrc, posterSrc, title, la
             muted
             loop
             playsInline
-            preload="metadata"
+            preload="auto"
             poster={posterSrc}
+            src={previewSrc}
             className="w-full aspect-video object-cover"
-            onError={() => setHasPreview(false)}
-          >
-            <source src={previewSrc.replace('.mp4', '.webm')} type="video/webm" />
-            <source src={previewSrc} type="video/mp4" />
-          </video>
+            onError={handleVideoError}
+          />
         ) : (
           /* Fallback — show when video files aren't available yet */
           <div className="w-full aspect-video bg-gradient-to-br from-foreground/5 to-foreground/10 flex flex-col items-center justify-center gap-3">
@@ -94,11 +98,9 @@ export default function VideoPreview({ previewSrc, fullSrc, posterSrc, title, la
               playsInline
               preload="auto"
               poster={posterSrc}
+              src={fullSrc}
               className="w-full rounded-sm shadow-2xl"
-            >
-              <source src={fullSrc.replace('.mp4', '.webm')} type="video/webm" />
-              <source src={fullSrc} type="video/mp4" />
-            </video>
+            />
             <p className="text-white/30 text-[10px] font-mono uppercase tracking-widest mt-3 text-center">
               {title} · {label}
             </p>
