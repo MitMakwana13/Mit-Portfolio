@@ -18,7 +18,7 @@ export default function Hero() {
               <p className="text-muted uppercase tracking-[0.2em] text-xs font-mono mb-6">
                 AI/ML Engineer & Full-Stack Builder
               </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground tracking-tight leading-[1.15] mb-8 max-w-2xl">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-display font-semibold text-foreground tracking-tight leading-[1.2] mb-8 max-w-2xl">
                 Hi, I'm Mit.
                 <br />
                 I build AI agents,
