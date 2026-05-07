@@ -67,7 +67,7 @@ export default function CaseStudies() {
       <div className="max-w-7xl mx-auto">
         <header className="mb-20">
           <h2 className="text-foreground/30 uppercase tracking-[0.2em] text-sm font-display font-bold mb-4">Proof of work</h2>
-          <p className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground tracking-tighter leading-[1.05] max-w-3xl">
+          <p className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground tracking-tight lg:tracking-tighter leading-[1.1] max-w-3xl">
             Systems I've built. Not concepts.
           </p>
         </header>
@@ -128,7 +128,7 @@ function CaseStudyCard({ study, index }: { study: CaseStudy; index: number }) {
       {/* Content Side */}
       <div className="lg:col-span-5 flex flex-col justify-center">
         <p className="text-[10px] uppercase tracking-[0.15em] font-bold text-accent mb-3">{study.industry}</p>
-        <h3 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-2 tracking-tighter group-hover:text-accent transition-colors duration-300">
+        <h3 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-2 tracking-tight lg:tracking-tighter group-hover:text-accent transition-colors duration-300">
           {study.title}
         </h3>
         <p className="text-muted text-sm md:text-base mb-8 font-medium">{study.outcome}</p>

@@ -16,38 +16,46 @@ export default function Hero() {
           <div className="lg:w-[55%]">
             <div className={isMounted ? 'animate-fade-up' : 'reveal-hidden'}>
               <p className="text-foreground/30 uppercase tracking-[0.2em] text-sm font-display font-bold mb-6">
-                Production AI, shipped fast
+                AI/ML Engineer & Full-Stack Builder
               </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground tracking-tighter leading-[1.05] mb-8 max-w-2xl">
-                I ship AI agents and automation systems that take repetitive work off your team.
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground tracking-tight lg:tracking-tighter leading-[1.1] mb-8 max-w-2xl">
+                Hi, I'm Mit. I build AI agents, automation systems, RAG apps, and niche websites.
               </h1>
             </div>
 
             <div className={isMounted ? 'animate-fade-up delay-200' : 'reveal-hidden'}>
               <p className="text-lg md:text-xl text-muted font-medium mb-10 max-w-xl leading-relaxed">
-                Customer support, lead qualification, document Q&A, internal automation — built in 2 to 4 weeks, deployed to your cloud.
+                I'm an AI/ML engineer focused on practical systems that reduce repetitive work, improve workflows, and turn ideas into deployed products.
               </p>
             </div>
 
             <div className={`flex flex-wrap gap-4 mb-12 ${isMounted ? 'animate-fade-up delay-300' : 'reveal-hidden'}`}>
               <a 
-                href="#work" 
+                href="#demo" 
                 className="px-8 py-4 bg-foreground text-background font-bold uppercase tracking-widest text-sm hover:bg-accent hover:text-background transition-colors duration-300 w-full sm:w-auto text-center focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:outline-none"
               >
-                See it work
+                View Demo Work
+              </a>
+              <a 
+                href="/Mit_Makwana_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 bg-transparent text-foreground font-bold uppercase tracking-widest text-sm border border-foreground/20 hover:border-foreground transition-colors duration-300 w-full sm:w-auto text-center focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:outline-none"
+              >
+                Download Resume
               </a>
               <a 
                 href="mailto:meetmakwana2004@gmail.com" 
                 className="px-8 py-4 bg-transparent text-foreground font-bold uppercase tracking-widest text-sm border border-foreground/20 hover:border-foreground transition-colors duration-300 w-full sm:w-auto text-center focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:outline-none"
               >
-                Book a call
+                Contact Me
               </a>
             </div>
             
             {/* Industries strip */}
             <div className={`pt-6 border-t border-foreground/10 ${isMounted ? 'animate-fade-up delay-500' : 'reveal-hidden'}`}>
               <p className="text-[10px] md:text-xs uppercase tracking-[0.15em] font-bold text-foreground/30 leading-relaxed">
-                Built for: E-commerce · Clinics · SaaS · Real Estate · Agencies · Salons · Law Firms · Manufacturing · Education · Logistics
+                Built for: E-commerce · Clinics · SaaS · Real Estate · Agencies · Salons · Law Firms · Education · Logistics
               </p>
             </div>
           </div>

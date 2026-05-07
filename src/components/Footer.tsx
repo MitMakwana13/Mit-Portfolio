@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto">
         {/* CTA Block */}
         <div className="mb-16 pb-16 border-b border-foreground/5">
-          <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground tracking-tighter mb-6 max-w-2xl leading-[1.05]">
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground tracking-tight lg:tracking-tighter mb-6 max-w-2xl leading-[1.05]">
             Have a workflow that shouldn't be manual?
           </h2>
           <p className="text-muted text-base md:text-lg mb-8 max-w-xl">
