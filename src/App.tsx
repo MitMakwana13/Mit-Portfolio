@@ -13,6 +13,7 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import DemoReelReceptionist from './components/DemoReelReceptionist';
 import DemoReelRAG from './components/DemoReelRAG';
+import DemoReelLeadAgent from './components/DemoReelLeadAgent';
 import './App.css';
 
 function App() {
@@ -33,6 +34,9 @@ function App() {
   }
   if (route === '#/demo-reel-rag') {
     return <DemoReelRAG />;
+  }
+  if (route === '#/demo-reel-lead-agent') {
+    return <DemoReelLeadAgent />;
   }
 
   return (
