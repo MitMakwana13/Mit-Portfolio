@@ -89,7 +89,7 @@ const caseStudies: CaseStudy[] = [
     technicalDecision: "Implemented walk-forward validation to prevent look-ahead bias. Used PyTorch for model training and React for the interactive visualization layer.",
     impact: "Demonstrated practical ML model comparison workflows for time-series data in an accessible interface.",
     stack: "React · Python · PyTorch · TensorFlow · FastAPI",
-    image: "",
+    image: "/project_stockcast.png",
     gradient: "from-rose-900/80 to-black",
     tag: "ML Prototype",
     ctaLabel: "View prototype",

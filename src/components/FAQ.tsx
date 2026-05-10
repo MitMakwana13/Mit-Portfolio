@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     q: "Why hire me over an established agency?",
-    a: "Lower cost, faster decisions, direct line to the engineer. Agencies are better if you need 10 systems built in parallel. I'm better if you need 1 system built right."
+    a: "I work directly on the architecture, implementation, and delivery, so decisions move fast and the system stays technically coherent. For larger scopes, I can structure multiple builds in parallel using a focused AI-assisted delivery workflow while keeping quality gates, documentation, and handoff clear."
   },
   {
     q: "Why isn't pricing on the site?",

@@ -78,9 +78,9 @@ export default function ChatMockup() {
       </div>
 
       {/* Chat Window */}
-      <div className="bg-card border border-foreground/10 rounded-sm overflow-hidden shadow-2xl">
+      <div className="bg-card border border-foreground/10 rounded-sm shadow-2xl flex flex-col h-[480px] sm:h-[520px]">
         {/* Header */}
-        <div className="px-5 py-4 border-b border-foreground/5 flex items-center gap-3">
+        <div className="px-5 py-4 border-b border-foreground/5 flex items-center gap-3 shrink-0">
           <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent text-xs font-black">
             AI
           </div>
@@ -91,7 +91,7 @@ export default function ChatMockup() {
         </div>
 
         {/* Messages */}
-        <div className="p-4 space-y-3 min-h-[260px] flex flex-col justify-end">
+        <div className="p-4 space-y-3 flex-1 overflow-hidden flex flex-col justify-end min-h-0">
           {currentConvo.messages.slice(0, visibleCount).map((msg, idx) => (
             <div
               key={`${convoIndex}-${idx}`}
@@ -121,7 +121,7 @@ export default function ChatMockup() {
         </div>
 
         {/* Input bar (decorative) */}
-        <div className="px-4 py-3 border-t border-foreground/5 flex items-center gap-3">
+        <div className="px-4 py-3 border-t border-foreground/5 flex items-center gap-3 shrink-0">
           <div className="flex-1 px-4 py-2 bg-background border border-foreground/10 rounded-sm text-xs text-muted">
             Type a message…
           </div>

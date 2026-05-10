@@ -49,6 +49,8 @@ export default function VideoPreview({ previewSrc, fullSrc, posterSrc, title, la
             className="w-full aspect-video object-cover"
             onError={handleVideoError}
           />
+        ) : posterSrc ? (
+          <img src={posterSrc} alt={title} className="w-full aspect-video object-cover" />
         ) : (
           /* Fallback — show when video files aren't available yet */
           <div className="w-full aspect-video bg-gradient-to-br from-foreground/5 to-foreground/10 flex flex-col items-center justify-center gap-3">
