@@ -21,7 +21,7 @@ function App() {
 
   useEffect(() => {
     const checkHash = () => {
-      setRoute(window.location.hash);
+      setRoute(window.location.hash.replace(/\/$/, ''));
     };
     checkHash();
     window.addEventListener('hashchange', checkHash);
