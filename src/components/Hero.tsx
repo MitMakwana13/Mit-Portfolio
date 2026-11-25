@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import ChatMockup from './ChatMockup';
+import HeroProof from './HeroProof';
 
 export default function Hero() {
   const [isMounted, setIsMounted] = useState(false);
@@ -42,10 +42,10 @@ export default function Hero() {
 
             <div className={`flex flex-wrap gap-4 mb-12 ${isMounted ? 'animate-fade-up delay-300' : 'reveal-hidden'}`}>
               <a 
-                href="#demo" 
+                href="#case-studies" 
                 className="px-8 py-4 bg-foreground text-background font-bold uppercase tracking-widest text-sm hover:bg-accent hover:text-background transition-colors duration-300 w-full sm:w-auto text-center focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:outline-none"
               >
-                View Demo Work
+                See My Work
               </a>
               <a 
                 href="/Mit_Makwana_Resume.pdf"
@@ -73,7 +73,7 @@ export default function Hero() {
 
           {/* Right Column — Static Chat Mockup */}
           <div className={`lg:w-[45%] ${isMounted ? 'animate-fade-up delay-300' : 'reveal-hidden'}`}>
-            <ChatMockup />
+            <HeroProof />
           </div>
         </div>
       </div>

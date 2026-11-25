@@ -3,10 +3,10 @@ import { useTheme } from '../context/ThemeContext';
 import { Sun, Moon, Menu, X } from 'lucide-react';
 
 const navLinks = [
-  { name: 'Work', href: '#work' },
+  { name: 'Work', href: '#case-studies' },
   { name: 'Clients', href: '#clients' },
   { name: 'Approach', href: '#approach' },
-  { name: 'Demos', href: '#demo' },
+  { name: 'Services', href: '#work' },
   { name: 'Process', href: '#process' },
   { name: 'FAQ', href: '#faq' },
 ];

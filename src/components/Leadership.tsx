@@ -24,7 +24,7 @@ const principles: Principle[] = [
   },
   {
     title: 'Measure honestly',
-    body: 'I report what a system did, where it was measured and what it did not do. Prototypes are labelled as prototypes.',
+    body: 'I report what a system did, where it was measured and what it did not do.',
     evidence: "99 Care's numbers come from its production database. AEGISOPS froze its test sets before building and reports results that only match the runbook as \"on par, not better\".",
   },
 ];

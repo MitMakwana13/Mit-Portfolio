@@ -82,7 +82,7 @@ export default function Offers() {
             Not just CRM automation. Here's the full picture.
           </p>
           <p className="text-muted text-base mt-6 max-w-2xl leading-relaxed">
-            The demos below use business workflows because they're easy to understand, but my work spans AI tools, full-stack apps, dashboards, niche websites, document assistants, and custom MVPs across different domains.
+            My work spans AI tools, operations platforms, full-stack apps, dashboards, websites, document assistants and custom MVPs, for businesses from home healthcare to jewelry and chemical export.
           </p>
         </header>
 

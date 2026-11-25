@@ -14,7 +14,7 @@ const capabilities = [
     title: "AI Agents & RAG",
     description: "I build assistants that answer from your documents with source-grounded responses.",
     tools: ["LLMs", "Prompt Engineering", "RAG Pipelines", "LangChain", "Vector Search", "Document Q&A", "Agent Workflows"],
-    usedIn: "Knowledge Agent Demo",
+    usedIn: "Generative AI internship, AEGISOPS",
   },
   {
     icon: <Code2 size={24} />,
@@ -28,7 +28,7 @@ const capabilities = [
     title: "Automation & Workflows",
     description: "I automate repetitive business operations — lead qualification, CRM updates, notifications.",
     tools: ["n8n", "Workflow Engines", "CRM Automation", "Lead Qualification", "Email Automation", "Reporting"],
-    usedIn: "Automation Flow Demo",
+    usedIn: "99 Care OS",
   },
   {
     icon: <Database size={24} />,
