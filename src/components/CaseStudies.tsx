@@ -16,6 +16,7 @@ interface CaseStudy {
   ctaLabel: string;
   ctaLink: string;
   ctaExternal?: boolean;
+  placeholder?: string;
   video?: {
     preview: string;
     full: string;
@@ -24,6 +25,56 @@ interface CaseStudy {
 }
 
 const caseStudies: CaseStudy[] = [
+  {
+    title: "99 Care OS",
+    industry: "Healthcare · Home-care agency, Surat",
+    outcome: "The operations system a home-care agency has run on for 6 months: clients, 116 caregivers, deposits, billing and WhatsApp.",
+    problem: "99 Care sends caregivers into families' homes. The business ran on WhatsApp chats, notebooks and memory: who is with which family, who paid a deposit, how many days each caregiver worked, and what each client owes.",
+    solution: "Built one system for the office: client records, caregiver profiles and assignments, payslips and QR ID cards, deposits, invoices generated from attendance, WhatsApp messaging and forms, and a public website with booking.",
+    technicalDecision: "Put the business rules in Postgres (stage checks, duplicate-message guards) so automation stays safe when webhooks fire twice. Built for WhatsApp because that's where staff and families already were. Switched off the AI voice agent when its per-minute cost outweighed its value.",
+    impact: "91 invoices for 38 clients, ₹3.45 lakh in deposits tracked, 116 caregivers and 26 active clients in one place, and about 4.5 hours of billing work saved every month.",
+    stack: "React · TypeScript · Supabase · Edge Functions · WhatsApp APIs · Vercel",
+    image: "/work/99care.jpg",
+    gradient: "from-teal-900/80 to-black",
+    tag: "Live client",
+    ctaLabel: "Read the case study",
+    ctaLink: "https://claude.ai/artifact/3MNnFeMoxJAxdqRyGx3fE1",
+    ctaExternal: true,
+  },
+  {
+    title: "CloudLynk",
+    industry: "Consumer app · Cloud storage & video",
+    outcome: "Android app for private cloud storage and subscription video channels. Co-built with a teammate.",
+    problem: "The product needed private file storage with quotas, paid video channels, Play subscriptions and ad attribution, all in one Android app with a backend that enforces who can see what.",
+    solution: "Built the Expo/React Native app and the Supabase backend: profiles, channels, one shared access rule, a private drive with quota reservation and cleanup, Play subscription verification, signed video playback, push notifications and account erasure.",
+    technicalDecision: "Kept a single access policy on the server instead of checks scattered across screens, and reserved storage quota before upload so failed uploads can't leak space.",
+    impact: "Backend features implemented and bound to live mobile screens. Production release and provider checks are the next step.",
+    stack: "Expo · React Native · TypeScript · Supabase · Cloudflare Stream · Meta SDK",
+    image: "",
+    gradient: "from-sky-900/80 to-black",
+    tag: "Team project",
+    placeholder: "Android · Expo + Supabase",
+    ctaLabel: "View on GitHub",
+    ctaLink: "https://github.com/captainpunit/CloudLynk_App",
+    ctaExternal: true,
+  },
+  {
+    title: "AEGISOPS",
+    industry: "MSc AI research · Site reliability",
+    outcome: "A safety-first recovery co-pilot for production incidents. Co-built with a teammate.",
+    problem: "Automated incident recovery is risky: an agent that acts on its own can make an outage worse. The question was how far learned recovery can go while people keep control of risky actions.",
+    solution: "A system that detects an incident, diagnoses the root cause, proposes a fix from a runbook and a learned policy, tests it in a sandbox, passes it through a deterministic safety engine, and waits for human approval before anything risky.",
+    technicalDecision: "Agents can only act through 10 typed tools with strict schemas, with no shell or network access. Every evaluation set was frozen before the methods were built and evaluated once.",
+    impact: "Safety-constrained PPO recovered 94% of 100 holdout incidents vs the runbook's 92% (on par, not better). Root cause ranked first in 75.6% of 250 external cases. All results are from simulation and public data, not production.",
+    stack: "Python · LangGraph · PPO / DQN · FastAPI · React · Docker",
+    image: "",
+    gradient: "from-indigo-900/80 to-black",
+    tag: "Team project",
+    placeholder: "Digital twin · RL · safety engine",
+    ctaLabel: "View on GitHub",
+    ctaLink: "https://github.com/captainpunit/AEGISOPS",
+    ctaExternal: true,
+  },
   {
     title: "WhatsApp AI Receptionist",
     industry: "Healthcare · Dental Clinic",
@@ -120,7 +171,7 @@ const caseStudies: CaseStudy[] = [
 
 export default function CaseStudies() {
   return (
-    <section className="py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-background border-t border-foreground/5">
+    <section id="case-studies" className="py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-background border-t border-foreground/5">
       <div className="max-w-7xl mx-auto">
         <header className="mb-20">
           <h2 className="text-muted uppercase tracking-[0.2em] text-xs font-mono mb-4">Proof of work</h2>
@@ -164,7 +215,7 @@ function CaseStudyCard({ study, index }: { study: CaseStudy; index: number }) {
             </a>
             {study.tag && (
               <span className={`absolute top-4 left-4 px-3 py-1 text-[10px] font-black uppercase tracking-widest rounded-full z-10 ${
-                study.tag === 'Shipped' || study.tag === 'Prototype'
+                study.tag === 'Shipped' || study.tag === 'Prototype' || study.tag === 'Live client'
                   ? 'bg-accent text-background' 
                   : 'bg-foreground/20 text-foreground/80 border border-foreground/10'
               }`}>
@@ -188,12 +239,13 @@ function CaseStudyCard({ study, index }: { study: CaseStudy; index: number }) {
         {!study.image && !study.video && (
           <div className={`relative overflow-hidden aspect-[16/10] bg-gradient-to-br ${study.gradient} rounded-sm flex items-center justify-center`}>
             <div className="text-center px-8">
-              <p className="text-white/60 text-sm font-mono uppercase tracking-widest mb-2">Demo coming soon</p>
+              <p className="text-white/80 text-2xl md:text-3xl font-bold tracking-tight mb-2">{study.title}</p>
+              <p className="text-white/60 text-sm font-mono uppercase tracking-widest">{study.placeholder ?? 'Demo coming soon'}</p>
             </div>
             {study.tag && (
               <span className={`absolute top-4 left-4 px-3 py-1 text-[10px] font-black uppercase tracking-widest rounded-full z-10 ${
-                study.tag === 'Shipped' 
-                  ? 'bg-accent text-background' 
+                study.tag === 'Shipped' || study.tag === 'Team project'
+                  ? 'bg-accent text-background'
                   : 'bg-foreground/20 text-foreground/80 border border-foreground/10'
               }`}>
                 {study.tag}
@@ -223,6 +275,10 @@ function CaseStudyCard({ study, index }: { study: CaseStudy; index: number }) {
           <div>
             <h4 className="text-[10px] uppercase tracking-widest text-foreground/40 font-bold mb-1">Technical decision</h4>
             <p className="text-sm text-foreground/70 leading-relaxed">{study.technicalDecision}</p>
+          </div>
+          <div>
+            <h4 className="text-[10px] uppercase tracking-widest text-foreground/40 font-bold mb-1">Impact</h4>
+            <p className="text-sm text-foreground/70 leading-relaxed">{study.impact}</p>
           </div>
           <div>
             <h4 className="text-[10px] uppercase tracking-widest text-foreground/40 font-bold mb-1">Stack</h4>

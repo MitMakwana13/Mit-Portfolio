@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Mit Makwana — Resume</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+  /* Edit this file, then re-export the PDF from the project folder with:
+     "C:\Program Files\Google\Chrome\Application\chrome.exe" --headless=new --no-pdf-header-footer --virtual-time-budget=8000 --print-to-pdf=public\Mit_Makwana_Resume.pdf resume\resume.html
+     It must stay exactly 2 pages; each .page is a fixed A4 sheet. */
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Inter", "Segoe UI", sans-serif; color: #1a1a1a; font-size: 9.3pt; line-height: 1.38; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { width: 210mm; height: 297mm; overflow: hidden; padding: 13mm 15mm 12mm; position: relative; }
+  .page + .page { page-break-before: always; }
+  .mono { font-family: "JetBrains Mono", Consolas, monospace; }
+  header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 5mm; }
+  h1 { font-size: 26pt; font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; }
+  .role { font-size: 11pt; color: #555; margin: 4px 0 8px; }
+  .contacts { display: flex; flex-wrap: wrap; gap: 4px 12px; font-family: "JetBrains Mono", monospace; font-size: 7.6pt; }
+  .contacts a { color: #1a1a1a; text-decoration: none; border-bottom: 1px solid #bbb; padding-bottom: 1px; }
+  .qr { text-align: center; font-family: "JetBrains Mono", monospace; font-size: 6.8pt; color: #666; }
+  .qr .box { border: 1px solid #ddd; border-radius: 8px; padding: 5px; margin-bottom: 4px; }
+  .cols { display: grid; grid-template-columns: 1fr 66mm; gap: 9mm; }
+  .label { font-family: "JetBrains Mono", monospace; font-size: 7.4pt; letter-spacing: 0.12em; text-transform: uppercase; color: #444; margin: 0 0 3.2mm; }
+  section { margin-bottom: 4.5mm; }
+  .summary { font-size: 9.8pt; color: #333; margin-bottom: 5mm; }
+  .item { margin-bottom: 4.2mm; }
+  .item + .item.rule { border-top: 1px solid #e6e6e6; padding-top: 3.4mm; }
+  .head { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+  .title { font-weight: 600; font-size: 10.2pt; }
+  .title .org { font-weight: 400; color: #555; }
+  .meta { font-family: "JetBrains Mono", monospace; font-size: 7.2pt; color: #555; text-align: right; white-space: nowrap; }
+  .kind { font-family: "JetBrains Mono", monospace; font-size: 7pt; color: #666; margin-left: 6px; font-weight: 400; }
+  .badge { font-family: "JetBrains Mono", monospace; font-size: 6.6pt; text-transform: uppercase; letter-spacing: 0.06em; border: 1px solid #0f6b5c; color: #0f6b5c; border-radius: 3px; padding: 0 4px; margin-left: 6px; vertical-align: 1px; }
+  ul { list-style: none; margin-top: 2px; }
+  ul li { position: relative; padding-left: 10px; margin-bottom: 1.2px; }
+  ul li::before { content: ""; position: absolute; left: 1px; top: 0.62em; width: 3px; height: 3px; border-radius: 50%; background: #777; }
+  p.desc { color: #333; margin-top: 2px; }
+  .why { font-style: italic; color: #444; margin-top: 2px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+  .tags span { font-family: "JetBrains Mono", monospace; font-size: 6.8pt; border: 1px solid #d6d6d6; border-radius: 3px; padding: 1px 5px; color: #333; }
+  .side .item { margin-bottom: 3.4mm; }
+  .side .title { font-size: 9.6pt; }
+  .sub { color: #555; }
+  .group { font-family: "JetBrains Mono", monospace; font-size: 6.8pt; color: #666; text-transform: uppercase; letter-spacing: 0.1em; margin: 2.6mm 0 1.4mm; }
+  .sites div { display: flex; justify-content: space-between; gap: 6px; font-size: 8.4pt; margin-bottom: 1.6px; }
+  .sites span:last-child { font-family: "JetBrains Mono", monospace; font-size: 6.9pt; color: #555; text-align: right; }
+  .links div { display: flex; justify-content: space-between; font-size: 7.6pt; margin-bottom: 3px; }
+  .links span:first-child { font-family: "JetBrains Mono", monospace; color: #666; letter-spacing: 0.08em; }
+  .links span:last-child { font-family: "JetBrains Mono", monospace; border-bottom: 1px solid #bbb; }
+  footer { position: absolute; left: 15mm; right: 15mm; bottom: 10mm; display: flex; justify-content: space-between; border-top: 1px solid #ddd; padding-top: 3mm; font-family: "JetBrains Mono", monospace; font-size: 7pt; color: #666; }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <header>
+    <div>
+      <h1>Mit Makwana</h1>
+      <p class="role">AI/ML Engineer · Full-Stack Builder · Surat, India</p>
+      <div class="contacts">
+        <a href="mailto:meetmakwana2004@gmail.com">meetmakwana2004@gmail.com</a>
+        <a href="https://linkedin.com/in/mitmakwana">linkedin.com/in/mitmakwana</a>
+        <a href="https://github.com/MitMakwana13">github.com/MitMakwana13</a>
+        <a href="https://mit-portfolio-nu.vercel.app/">mit-portfolio-nu.vercel.app</a>
+      </div>
+    </div>
+    <div class="qr"><div class="box"><div id="qr"></div></div>Portfolio</div>
+  </header>
+
+  <div class="cols">
+    <div class="main">
+      <p class="summary">I build AI systems, full-stack products and websites that real businesses run on. A home-care agency has run its clients, caregivers, deposits and billing on my system for 6 months, and six client websites I built are live. I care about engineering decisions and running costs, not just shipping features.</p>
+
+      <section>
+        <p class="label">Experience</p>
+
+        <div class="item">
+          <div class="head"><p class="title">Freelance AI &amp; Full-Stack Developer</p><p class="meta">2026 – Present<br>Surat · Remote</p></div>
+          <ul>
+            <li><b>99 Care OS</b>: built and run the operations platform for a home-care agency. 91 invoices for 38 clients, ₹3.45 lakh in deposits tracked, 116 caregivers and 26 active clients in one system, about 4.5 hrs of billing saved a month.</li>
+            <li>WhatsApp-first design: messaging, intake and consent forms, and an intake bot that handles Hindi and messy replies. Business rules enforced in Postgres.</li>
+            <li>Switched off an AI voice agent when its per-minute cost outweighed its value; WhatsApp now handles intake.</li>
+            <li>Designed and shipped <b>six client websites</b> across catering, jewelry, fashion wholesale, chemical export and branding.</li>
+          </ul>
+          <div class="tags"><span>React</span><span>TypeScript</span><span>Supabase</span><span>Next.js</span><span>WhatsApp APIs</span><span>Claude Code</span></div>
+        </div>
+
+        <div class="item rule">
+          <div class="head"><p class="title">AI &amp; ML Intern <span class="org">· Peanut Square LLP</span></p><p class="meta">Jan – Apr 2025<br>Surat, Gujarat</p></div>
+          <ul>
+            <li>Built and deployed ML models for classification and regression using Python, TensorFlow and FastAPI.</li>
+            <li>Developed NLP pipelines for text classification and sentiment analysis on real business datasets.</li>
+            <li>Integrated AI inference endpoints into production web apps, reducing manual processing time by ~60%.</li>
+          </ul>
+          <div class="tags"><span>Python</span><span>TensorFlow</span><span>NLP</span><span>FastAPI</span><span>MongoDB</span><span>React</span></div>
+        </div>
+
+        <div class="item rule">
+          <div class="head"><p class="title">Generative AI Intern <span class="org">· YBAISolution &amp; DataYB</span></p><p class="meta">Jan – Jun 2024<br>Remote</p></div>
+          <ul>
+            <li>Designed and trained GANs and LLM-based pipelines for generative content workflows.</li>
+            <li>Built RAG systems using LangChain and Hugging Face for document Q&amp;A with source citation.</li>
+            <li>Developed and deployed transformer-based chatbot solutions for client deployments.</li>
+          </ul>
+          <div class="tags"><span>GANs</span><span>LLMs</span><span>LangChain</span><span>RAG</span><span>Hugging Face</span></div>
+        </div>
+      </section>
+    </div>
+
+    <aside class="side">
+      <section>
+        <p class="label">Education</p>
+        <div class="item"><p class="title">MSc Artificial Intelligence</p><p class="sub">AURO University</p><p class="mono" style="font-size:7.2pt;color:#555">Aug 2025 – Present</p><p class="sub">Advanced ML, Deep Learning, NLP, Computer Vision, AI Ethics</p></div>
+        <div class="item"><p class="title">BSc Information Technology</p><p class="sub">AURO University</p><p class="mono" style="font-size:7.2pt;color:#555">2022 – 2025</p><p class="sub">Software development, algorithms, data structures, databases</p></div>
+      </section>
+
+      <section>
+        <p class="label">Client websites</p>
+        <div class="sites">
+          <div><span>Shivam Caterers</span><span>shivamcaterers.in</span></div>
+          <div><span>ARC Diamond Jewelry</span><span>arcdiamondjewelry.com</span></div>
+          <div><span>Radha Rani Gemstone</span><span>radharanigemstone.com</span></div>
+          <div><span>Polaris Designs</span><span>polarisdesigns.in</span></div>
+          <div><span>Shivam Garments</span><span>vercel.app</span></div>
+          <div><span>GXM International</span><span>preview</span></div>
+        </div>
+      </section>
+
+      <section>
+        <p class="label">Certifications</p>
+        <div class="item"><p class="title">AI &amp; Machine Learning — Advanced Certificate</p><p class="mono" style="font-size:7.2pt;color:#555">IBM · Credly · Jun 2025</p></div>
+        <div class="item"><p class="title">Generative AI Mastery &amp; Internship</p><p class="mono" style="font-size:7.2pt;color:#555">DataYB &amp; YBAISolution · 2024</p></div>
+        <div class="item"><p class="title">AI &amp; ML Internship Certificate</p><p class="mono" style="font-size:7.2pt;color:#555">Peanut Square Technologies · 2025</p></div>
+      </section>
+
+      <section>
+        <p class="label">Core stack</p>
+        <p class="group">AI / ML</p>
+        <div class="tags"><span>Python</span><span>TensorFlow</span><span>PyTorch</span><span>Scikit-learn</span><span>OpenCV</span><span>Transformers</span><span>GANs</span><span>RL (PPO, DQN)</span></div>
+        <p class="group">Agents &amp; RAG</p>
+        <div class="tags"><span>LangChain</span><span>LangGraph</span><span>OpenAI</span><span>Claude API</span><span>RAG</span><span>pgvector</span></div>
+        <p class="group">Full-stack &amp; mobile</p>
+        <div class="tags"><span>React</span><span>Next.js</span><span>TypeScript</span><span>Node.js</span><span>FastAPI</span><span>Expo / React Native</span><span>WordPress</span></div>
+        <p class="group">Data &amp; cloud</p>
+        <div class="tags"><span>PostgreSQL</span><span>Supabase</span><span>MongoDB</span><span>Docker</span><span>Vercel</span><span>Cloudflare</span></div>
+      </section>
+    </aside>
+  </div>
+</div>
+
+<div class="page">
+  <div class="cols">
+    <div class="main">
+      <section>
+        <p class="label">Selected projects</p>
+
+        <div class="item">
+          <p class="title">CloudLynk <span class="kind">Android · Cloud storage &amp; video</span><span class="badge">Team</span></p>
+          <p class="desc">Co-built an Android app for private cloud storage and subscription video channels: Expo app plus Supabase backend with one shared access rule, a private drive with quota reservation, Play subscription verification, signed video playback and account erasure.</p>
+          <div class="tags"><span>Expo</span><span>React Native</span><span>Supabase</span><span>Cloudflare Stream</span><span>Meta SDK</span></div>
+        </div>
+
+        <div class="item rule">
+          <p class="title">AEGISOPS <span class="kind">MSc AI research · Site reliability</span><span class="badge">Team</span></p>
+          <p class="desc">Co-built a safety-first recovery co-pilot for production incidents: detects, diagnoses, proposes a fix, tests it in a sandbox, checks it with a deterministic safety engine and waits for human approval before risky actions.</p>
+          <p class="why">Safety-constrained PPO recovered 94% of 100 holdout incidents vs the runbook's 92% (on par); root cause ranked first in 75.6% of 250 external cases. Simulation and public-data results, not production.</p>
+          <div class="tags"><span>Python</span><span>LangGraph</span><span>PPO / DQN</span><span>FastAPI</span><span>React</span><span>Docker</span></div>
+        </div>
+
+        <div class="item rule">
+          <p class="title">WhatsApp AI Receptionist <span class="kind">Healthcare · Dental clinic</span><span class="badge">Prototype</span></p>
+          <p class="desc">WhatsApp agent for bookings, cancellations and FAQs with hand-off to staff. FastAPI + PostgreSQL for low-latency webhooks; prompts handle Hindi-English code-switching.</p>
+          <div class="tags"><span>React</span><span>FastAPI</span><span>PostgreSQL</span><span>LangChain</span><span>OpenAI</span></div>
+        </div>
+
+        <div class="item rule">
+          <p class="title">Internal Knowledge Agent <span class="kind">Legal · Multi-partner firm</span><span class="badge">Prototype</span></p>
+          <p class="desc">RAG agent over 200+ SOPs, case files and contracts with inline source citations. 200-token chunks with 50-token overlap; pgvector search.</p>
+          <div class="tags"><span>Next.js</span><span>Supabase pgvector</span><span>OpenAI Embeddings</span><span>Claude API</span></div>
+        </div>
+
+        <div class="item rule">
+          <p class="title">AI Lead Qualification Agent <span class="kind">Real estate · Brokerage</span><span class="badge">Prototype</span></p>
+          <p class="desc">Qualifies WhatsApp leads in 3–5 messages, extracts budget and location with structured prompts, and books site visits into the broker's calendar.</p>
+          <div class="tags"><span>Next.js</span><span>FastAPI</span><span>Supabase</span><span>Claude API</span></div>
+        </div>
+
+        <div class="item rule">
+          <p class="title">Gujarati Community Platform <span class="kind">Social · Diaspora</span></p>
+          <p class="desc">Profiles, posts, events and real-time content; Next.js SSR for SEO, Supabase auth and role-based moderation.</p>
+          <div class="tags"><span>Next.js</span><span>TypeScript</span><span>Supabase</span><span>Tailwind CSS</span></div>
+        </div>
+
+        <div class="item rule">
+          <p class="title">Stock Forecasting Dashboard <span class="kind">Finance · ML</span><span class="badge">Prototype</span></p>
+          <p class="desc">LSTM and Transformer models compared side by side, with walk-forward validation to avoid look-ahead bias.</p>
+          <div class="tags"><span>React</span><span>Python</span><span>PyTorch</span><span>TensorFlow</span><span>FastAPI</span></div>
+        </div>
+      </section>
+    </div>
+
+    <aside class="side">
+      <section>
+        <p class="label">Automation</p>
+        <div class="tags"><span>WhatsApp APIs</span><span>n8n</span><span>CRM automation</span><span>Workflow engines</span><span>Claude Code</span></div>
+      </section>
+
+      <section>
+        <p class="label">Links</p>
+        <div class="links">
+          <div><span>PORTFOLIO</span><span>mit-portfolio-nu.vercel.app</span></div>
+          <div><span>GITHUB</span><span>github.com/MitMakwana13</span></div>
+          <div><span>LINKEDIN</span><span>linkedin.com/in/mitmakwana</span></div>
+          <div><span>EMAIL</span><span>meetmakwana2004@gmail.com</span></div>
+        </div>
+      </section>
+    </aside>
+  </div>
+  <footer><span>Available globally · Open to full-time &amp; contract roles</span><span>mit-portfolio-nu.vercel.app</span></footer>
+</div>
+
+<script>
+  try { new QRCode(document.getElementById('qr'), { text: 'https://mit-portfolio-nu.vercel.app/', width: 70, height: 70, correctLevel: QRCode.CorrectLevel.M }); } catch (e) {}
+</script>
+</body>
+</html>

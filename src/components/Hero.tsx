@@ -32,8 +32,11 @@ export default function Hero() {
             </div>
 
             <div className={isMounted ? 'animate-fade-up delay-200' : 'reveal-hidden'}>
-              <p className="text-lg md:text-xl text-muted mb-10 max-w-xl leading-relaxed">
+              <p className="text-lg md:text-xl text-muted mb-6 max-w-xl leading-relaxed">
                 From AI agents and RAG apps to dashboards, websites, workflow tools, and custom MVPs — I turn ideas into deployed software.
+              </p>
+              <p className="text-sm md:text-base text-foreground/80 mb-10 max-w-xl leading-relaxed border-l-2 border-accent pl-4">
+                Right now: a home-care agency runs on a system I built (91 invoices, 116 caregivers, 6 months live), plus six client websites in production.
               </p>
             </div>
 
@@ -63,7 +66,7 @@ export default function Hero() {
             {/* Industries strip */}
             <div className={`pt-6 border-t border-foreground/10 ${isMounted ? 'animate-fade-up delay-500' : 'reveal-hidden'}`}>
               <p className="text-[10px] md:text-xs uppercase tracking-[0.15em] font-bold text-foreground/30 leading-relaxed">
-                Built for: E-commerce · Clinics · SaaS · Real Estate · Agencies · Salons · Law Firms · Education · Logistics
+                Built for: Home healthcare · Catering · Jewelry · Fashion wholesale · Chemical export · Branding studios · Clinics · Real Estate · Law Firms
               </p>
             </div>
           </div>

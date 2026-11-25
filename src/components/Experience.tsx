@@ -24,6 +24,16 @@ const experiences: ExperienceItem[] = [
   },
   {
     type: 'work',
+    role: 'Freelance AI & Full-Stack Developer',
+    org: 'Self-employed',
+    period: '2026 – Present',
+    duration: 'Ongoing',
+    location: 'Surat, Gujarat · Remote',
+    description: 'Built and run the operations platform for 99 Care, a home-care agency: 91 invoices for 38 clients, ₹3.45 lakh in deposits and 116 caregivers managed in one system. Designed and shipped six client websites across catering, jewelry, fashion wholesale, chemical export and branding.',
+    skills: ['React', 'TypeScript', 'Supabase', 'Next.js', 'WhatsApp APIs', 'Claude Code']
+  },
+  {
+    type: 'work',
     role: 'AI & ML Intern',
     org: 'Peanut Square LLP',
     period: 'Jan 2025 – Apr 2025',
