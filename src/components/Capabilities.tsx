@@ -7,7 +7,7 @@ const capabilities = [
     title: "AI / Machine Learning",
     description: "I train and deploy models for classification, prediction, vision, and NLP tasks.",
     tools: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "OpenCV", "NLP", "CNN", "LSTM", "Transformers"],
-    usedIn: "Healthcare Diagnosis, StockCast",
+    usedIn: "Stock forecasting, AEGISOPS",
   },
   {
     icon: <Bot size={24} />,
@@ -21,7 +21,7 @@ const capabilities = [
     title: "Full-Stack Development",
     description: "I build complete web applications — frontend, backend, API, and deployment.",
     tools: ["React", "Next.js", "TypeScript", "Node.js", "FastAPI", "Flask", "REST APIs", "Dashboards"],
-    usedIn: "99 CARE, Lead Agent",
+    usedIn: "99 Care OS, CloudLynk",
   },
   {
     icon: <Workflow size={24} />,
@@ -42,7 +42,7 @@ const capabilities = [
     title: "Websites & Product UI",
     description: "I build high-converting niche websites, landing pages, and product dashboards.",
     tools: ["Niche Websites", "Landing Pages", "Responsive UI", "Tailwind CSS", "Framer Motion", "SEO"],
-    usedIn: "Portfolio, Client sites",
+    usedIn: "Six live client websites",
   },
 ];
 

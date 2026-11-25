@@ -16,7 +16,7 @@ export default function Hero() {
           <div className="lg:w-[55%]">
             <div className={isMounted ? 'animate-fade-up' : 'reveal-hidden'}>
               <p className="text-muted uppercase tracking-[0.2em] text-xs font-mono mb-6">
-                AI/ML Engineer & Full-Stack Builder
+                AI Engineer · On the path to Chief AI Officer
               </p>
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-display font-semibold text-foreground tracking-tight leading-[1.2] mb-8 max-w-2xl">
                 Hi, I'm Mit.
@@ -33,7 +33,7 @@ export default function Hero() {
 
             <div className={isMounted ? 'animate-fade-up delay-200' : 'reveal-hidden'}>
               <p className="text-lg md:text-xl text-muted mb-6 max-w-xl leading-relaxed">
-                From AI agents and RAG apps to dashboards, websites, workflow tools, and custom MVPs — I turn ideas into deployed software.
+                I turn business problems into AI and software that pays for itself: from AI agents and RAG apps to operations platforms and websites. I decide where AI is worth it, then ship it.
               </p>
               <p className="text-sm md:text-base text-foreground/80 mb-10 max-w-xl leading-relaxed border-l-2 border-accent pl-4">
                 Right now: a home-care agency runs on a system I built (91 invoices, 116 caregivers, 6 months live), plus six client websites in production.

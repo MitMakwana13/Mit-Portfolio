@@ -33,7 +33,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <p className="text-foreground font-bold text-xl mb-3">Mit Makwana</p>
-            <p className="text-muted text-sm leading-relaxed mb-1">AI agents & automation systems</p>
+            <p className="text-muted text-sm leading-relaxed mb-1">AI engineer · building toward AI leadership</p>
             <p className="text-foreground/30 text-xs font-mono">Surat, India · Available globally</p>
           </div>
 

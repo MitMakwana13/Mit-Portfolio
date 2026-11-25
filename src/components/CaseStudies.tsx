@@ -84,11 +84,11 @@ const caseStudies: CaseStudy[] = [
     technicalDecision: "Chose FastAPI + PostgreSQL for low-latency webhook processing. Structured the prompt layer to handle misspellings and casual Hindi-English mixing common in Indian WhatsApp messages.",
     impact: "Automated preliminary patient triage and reduced manual scheduling overhead for clinic staff.",
     stack: "React · FastAPI · PostgreSQL · LangChain · OpenAI",
-    image: "/project_99care.png",
+    image: "",
     gradient: "from-purple-900/80 to-black",
     tag: "Prototype",
     ctaLabel: "Open prototype demo",
-    ctaLink: "#demos",
+    ctaLink: "#demo",
     video: {
       preview: "/videos/ai-receptionist-preview.mp4",
       full: "/videos/ai-receptionist-full.mp4",
@@ -124,7 +124,7 @@ const caseStudies: CaseStudy[] = [
     gradient: "from-cyan-900/80 to-black",
     tag: "Representative",
     ctaLabel: "Open prototype demo",
-    ctaLink: "#demos",
+    ctaLink: "#demo",
     video: {
       preview: "/videos/rag-demo-preview.mp4",
       full: "/videos/rag-demo-full.mp4",
@@ -156,16 +156,11 @@ const caseStudies: CaseStudy[] = [
     technicalDecision: "Used a structured extraction prompt to reliably pull budget ranges and location preferences from casual conversation, even when buyers are vague.",
     impact: "Enabled faster lead response and reduced unqualified site visits.",
     stack: "Next.js · FastAPI · Supabase · Claude API",
-    image: "",
+    image: "/videos/lead-agent-poster.jpg",
     gradient: "from-emerald-900/80 to-black",
     tag: "Representative",
     ctaLabel: "Open prototype demo",
-    ctaLink: "#demos",
-    video: {
-      preview: "/videos/lead-agent-preview.mp4",
-      full: "/videos/lead-agent-full.mp4",
-      poster: "/videos/lead-agent-poster.jpg",
-    },
+    ctaLink: "#demo",
   },
 ];
 

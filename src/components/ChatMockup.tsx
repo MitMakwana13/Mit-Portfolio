@@ -74,7 +74,7 @@ export default function ChatMockup() {
     <div className="relative w-full max-w-sm mx-auto lg:mx-0">
       {/* Demo Badge */}
       <div className="absolute -top-3 right-4 px-3 py-1 bg-accent text-background text-[9px] font-black uppercase tracking-widest rounded-full z-20">
-        Live Demo
+        Demo
       </div>
 
       {/* Chat Window */}
